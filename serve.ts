@@ -15,8 +15,10 @@ const server = Bun.serve({
 
 			console.log(`File not found: ${path} ${file}`);
 
+			const isSub = path.includes('/da/') || path.includes('/en/') || path.includes('/it/');
+
 			// Fallback to index.html for SPA routing
-			const fallback = Bun.file('./dist/index.html');
+			const fallback = Bun.file(isSub ? (`${path}index.html`) : './dist/index.html');
 
 			return new Response(fallback, {
 				headers: { 'Content-Type': 'text/html' },
