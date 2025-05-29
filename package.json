@@ -1,14 +1,14 @@
 {
-	"name": "@majesticooss/mizar",
+	"name": "@rjoss/mizar",
 	"type": "module",
 	"version": "0.0.1",
 	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/majesticooss/mizar.git"
+		"url": "https://github.com/rjoss/mizar.git"
 	},
-	"bugs": "https://github.com/majesticooss/mizar/issues",
-	"homepage": "https://github.com/majesticooss/mizar",
+	"bugs": "https://github.com/rjoss/mizar/issues",
+	"homepage": "https://github.com/rjoss/mizar",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",

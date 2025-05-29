@@ -1,5 +1,5 @@
-export const siteUrl = "https://mizar.majestico.co";
-export const siteTitle = "Mizar";
-export const defaultLocale = "en";
-export const locales = ["en", "it"];
-export type Locale = "en" | "it";
+export const siteUrl = "https://bybil.nu";
+export const siteTitle = "ByBil ApS";
+export const defaultLocale = "da";
+export const locales = ["da", "en", "it"];
+export type Locale = "da" | "en" | "it";

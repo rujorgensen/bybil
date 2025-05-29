@@ -26,6 +26,14 @@ const settings: Record<string, LocalizedSettings> = {
 		style: style,
 		widget: widget,
 	},
+	da: {
+		header: headerEn,
+		footer: footerEn,
+		contacts: contacts,
+		seo: seoEn,
+		style: style,
+		widget: widget,
+	},
 };
 
 export function getLocalizedSettings(locale?: string): LocalizedSettings {

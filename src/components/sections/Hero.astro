@@ -2,7 +2,8 @@
 import type { ButtonProps } from "@/components/primitives/Button.astro";
 import Container from "@/components/primitives/Container.astro";
 import Link from "@/components/primitives/Link.astro";
-import Blob from "@/components/sections/Blob.astro";
+// import Blob from "@/components/sections/Blob.astro";
+import heroImage from "@/assets/pages/homepage/landing-logo.png";
 
 interface Props {
 	title: string;
@@ -72,7 +73,10 @@ const { title, subtitle, buttons = defaultButtons } = Astro.props;
 					</div>
 				</div>
 				<div class="justify-self-center col-span-1 row-span-1">
-					<Blob class="xl:pl-32" />
+					<!-- <Blob class="xl:pl-32" /> -->
+
+				<img src={heroImage.src} alt="image description" />;
+
 				</div>
 			</div>
 		</div>

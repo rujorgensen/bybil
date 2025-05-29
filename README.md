@@ -43,7 +43,7 @@ On the folder run
 
 ## ✍️ Admin dashboard
 
-You can access the admin dashboard for editing blog post at `/keystatic` 
+You can access the admin dashboard for editing blog post at `/keystatic`
 
 For more information follow Keystatic documentation at [https://keystatic.com/docs/introduction](https://keystatic.com/docs/introduction)
 
