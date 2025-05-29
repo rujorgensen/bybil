@@ -13,6 +13,8 @@ const server = Bun.serve({
 				return new Response(file);
 			}
 
+			console.log(`File not found: ${path} ${file}`);
+
 			// Fallback to index.html for SPA routing
 			const fallback = Bun.file('./dist/index.html');
 
