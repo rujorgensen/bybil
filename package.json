@@ -1,5 +1,5 @@
 {
-	"name": "@rjoss/mizar",
+	"name": "bybil",
 	"type": "module",
 	"version": "0.0.1",
 	"private": true,
@@ -8,7 +8,7 @@
 		"url": "https://github.com/rjoss/mizar.git"
 	},
 	"bugs": "https://github.com/rjoss/mizar/issues",
-	"homepage": "https://github.com/rjoss/mizar",
+	"homepage": "https://bybil.nu",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
@@ -16,7 +16,10 @@
 		"preview": "astro preview",
 		"astro": "astro",
 		"wrangler:dev": "wrangler pages dev",
-		"pwa:generate-assets": "pwa-assets-generator --preset minimal public/logo.svg"
+		"pwa:generate-assets": "pwa-assets-generator --preset minimal public/logo.svg",
+		"docker:build": "docker build -t bybil:latest -f .deploy/Dockerfile .",
+		"docker:run": "docker run --rm -p 6122:6122 bybil:latest",
+		"dock": "bun docker:build && bun docker:run"
 	},
 	"dependencies": {
 		"@astrojs/alpinejs": "^0.4.0",
@@ -61,7 +64,7 @@
 		"tailwindcss": "^3.4.3",
 		"workbox-window": "^7.1.0"
 	},
-	"packageManager": "bun@1.2.14",
+	"packageManager": "bun@1.2.15",
 	"overrides": {
 		"gsap": "^3.12.5",
 		"sharp": "0.33.4"

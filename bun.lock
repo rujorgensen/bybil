@@ -49,8 +49,8 @@
     },
   },
   "overrides": {
-    "sharp": "0.33.4",
     "gsap": "^3.12.5",
+    "sharp": "0.33.4",
   },
   "packages": {
     "@0no-co/graphql.web": ["@0no-co/graphql.web@1.1.1", "", { "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0" }, "optionalPeers": ["graphql"] }, "sha512-F2i3xdycesw78QCOBHmpTn7eaD2iNXGwB2gkfwxcOfBbeauYpr8RBSyJOkDrFtKtVRMclg8Sg3n1ip0ACyUuag=="],

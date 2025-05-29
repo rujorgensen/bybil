@@ -6,10 +6,23 @@
 		"strictNullChecks": true,
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["src/*"],
-			"site": ["site.config.ts"]
+			"@/*": [
+				"src/*"
+			],
+			"site": [
+				"site.config.ts"
+			]
 		},
-		"types": ["astro/client", "vite-plugin-pwa/vanillajs", "vite-plugin-pwa/info", "vite-plugin-pwa/pwa-assets"]
+		"types": [
+			"astro/client",
+			"vite-plugin-pwa/vanillajs",
+			"vite-plugin-pwa/info",
+			"vite-plugin-pwa/pwa-assets"
+		]
 	},
-	"exclude": ["node_modules", "dist", "public"]
+	"exclude": [
+		"node_modules",
+		"dist",
+		"public"
+	]
 }
