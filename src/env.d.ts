@@ -63,19 +63,12 @@ declare global {
 		};
 	}
 
-	interface WidgetSettings {
-		enabled: boolean;
-		icon: string;
-		link: string;
-	}
-
 	interface LocalizedSettings {
 		header: HeaderSettings;
 		footer: FooterSettings;
 		contacts: ContactSettings;
 		seo: MinimalSeo;
 		style: StyleSettings;
-		widget: WidgetSettings;
 	}
 
 	interface CollectionProps<CollectionName extends keyof ContentEntryMap> {

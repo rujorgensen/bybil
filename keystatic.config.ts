@@ -92,20 +92,6 @@ export default config({
 				),
 			},
 		}),
-		widget: singleton({
-			label: "Whatsapp widget",
-			path: "src/content/global/widget",
-			format: { data: "json" },
-			schema: {
-				enabled: fields.checkbox({ label: "Abilita" }),
-				icon: fields.select({
-					label: "Icona",
-					options: IconList,
-					defaultValue: "whatsapp",
-				}),
-				link: fields.url({ label: "Link" }),
-			},
-		}),
 		footer: singleton({
 			label: "Footer",
 			path: "src/content/global/footer",

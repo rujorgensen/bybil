@@ -6,7 +6,6 @@ import footerIt from "@/content/global/it/footer.json";
 import headerIt from "@/content/global/it/header.json";
 import seoIt from "@/content/global/it/seo.json";
 import style from "@/content/global/style.json";
-import widget from "@/content/global/widget.json";
 import { defaultLocale, locales } from "site.config";
 
 const settings: Record<string, LocalizedSettings> = {
@@ -16,7 +15,6 @@ const settings: Record<string, LocalizedSettings> = {
 		contacts: contacts,
 		seo: seoIt,
 		style: style,
-		widget: widget,
 	},
 	en: {
 		header: headerEn,
@@ -24,7 +22,6 @@ const settings: Record<string, LocalizedSettings> = {
 		contacts: contacts,
 		seo: seoEn,
 		style: style,
-		widget: widget,
 	},
 	da: {
 		header: headerEn,
@@ -32,7 +29,6 @@ const settings: Record<string, LocalizedSettings> = {
 		contacts: contacts,
 		seo: seoEn,
 		style: style,
-		widget: widget,
 	},
 };
 
