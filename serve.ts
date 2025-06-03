@@ -18,7 +18,7 @@ const server = Bun.serve({
 			const isSub = path.includes('/da/') || path.includes('/en/') || path.includes('/it/');
 
 			// Fallback to index.html for SPA routing
-			const fallback = Bun.file(isSub ? (`client/${path}/index.html`) : './dist/client/index.html');
+			const fallback = Bun.file((isSub ? (`client/${path}/index.html`) : './dist/client/index.html').replaceAll('//', '/'));
 
 			return new Response(fallback, {
 				headers: { 'Content-Type': 'text/html' },
