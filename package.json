@@ -38,7 +38,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@bobthered/tailwindcss-palette-generator": "^3.2.3",
+		"@bobthered/tailwindcss-palette-generator": "^4.0.0",
 		"@iconify-json/ic": "^1.2.2",
 		"@iconify-json/iconamoon": "^1.2.2",
 		"@iconify-json/mdi": "^1.2.3",
