@@ -110,16 +110,24 @@ const { title, subtitle, buttons = defaultButtons } = Astro.props;
 	[data-hero-reveal] {
 		opacity: 0;
 		filter: blur(3px);
+		transition:
+			opacity 1s ease,
+			filter 1s ease;
+	}
+
+	[data-hero-reveal].visible {
+		opacity: 1;
+		filter: blur(0);
 	}
 </style>
 
 <script>
 	import { gsap } from "gsap";
 	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-	import { BlurPlugin } from "@/utils/gsap-blur";
+
 	import { LifecycleManager } from "@/utils/lifecycle-manager";
 
-	gsap.registerPlugin(ScrollToPlugin, BlurPlugin);
+	gsap.registerPlugin(ScrollToPlugin);
 
 	const lm = new LifecycleManager();
 
@@ -133,11 +141,10 @@ const { title, subtitle, buttons = defaultButtons } = Astro.props;
 				document.getElementById("scroll-down-button");
 			scrollDownButton?.addEventListener("click", scrollDown);
 
-			gsap.to("[data-hero-reveal]", {
-				blur: 0,
-				duration: 1,
-				opacity: 1,
-			});
+			// Fade in the text
+			document
+				.querySelector("[data-hero-reveal]")
+				?.classList.add("visible");
 		});
 	});
 </script>
