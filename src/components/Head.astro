@@ -87,6 +87,7 @@ const seo = {
 	{pwaAssetsHead.links.map((link) => <link {...link} />)}
 	{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
 	<script src="/src/utils/pwa.ts"></script>
+	<script src="/src/utils/version.ts"></script>
 
 	<!-- PRECONNECT FONTS -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
