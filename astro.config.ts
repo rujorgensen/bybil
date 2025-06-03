@@ -1,4 +1,3 @@
-import alpinejs from "@astrojs/alpinejs";
 import markdoc from "@astrojs/markdoc";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
@@ -37,7 +36,6 @@ export default defineConfig({
 		},
 	},
 	integrations: [
-		alpinejs(),
 		tailwind({
 			// Base style is applied on the file global.css
 			applyBaseStyles: false,
