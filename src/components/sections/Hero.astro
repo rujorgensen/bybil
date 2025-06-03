@@ -122,9 +122,13 @@ const { title, subtitle, buttons = defaultButtons } = Astro.props;
 </style>
 
 <script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const hero = document.querySelector("#hero");
-		if (hero) {
+	const getHeroTextElement = () =>
+		document.querySelector("[data-hero-reveal]");
+
+	const doStuff = () => {
+		const heroTextElement = getHeroTextElement();
+
+		if (heroTextElement) {
 			const scrollDownButton =
 				document.getElementById("scroll-down-button");
 
@@ -135,10 +139,21 @@ const { title, subtitle, buttons = defaultButtons } = Astro.props;
 				});
 			});
 
-			// Fade in the text
-			document
-				.querySelector("[data-hero-reveal]")
-				?.classList.add("visible");
+			// Fade in the hero text
+			heroTextElement.classList.add("visible");
 		}
-	});
+	};
+
+	document.addEventListener("DOMContentLoaded", doStuff);
+
+	const interval = setInterval(() => {
+		const heroTextElement = getHeroTextElement();
+		if (
+			heroTextElement &&
+			!heroTextElement.classList.contains("visible")
+		) {
+			doStuff();
+			clearInterval(interval);
+		}
+	}, 100);
 </script>
