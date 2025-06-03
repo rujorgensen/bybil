@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 import Head from "@/components/Head.astro";
 import Footer from "@/components/footers/Footer.astro";
 import Navigation from "@/components/headers/Navigation.astro";
@@ -15,11 +14,12 @@ type Props = {
 };
 
 const { seo } = Astro.props;
+
+export const version: string = __VERSION__;
 ---
 
-<html lang={currentLocale}>
+<html lang={currentLocale} data-version={version}>
 	<Head seo={seo}>
-		<ViewTransitions />
 	</Head>
 	<body>
 		<LoadingIndicator />
@@ -29,3 +29,9 @@ const { seo } = Astro.props;
 		<Footer />
 	</body>
 </html>
+
+<script>
+	const version = document.documentElement.dataset.version;
+	// eslint-disable-next-line no-console
+	console.log(`Version: ${version as any}`);
+</script>
