@@ -122,12 +122,9 @@ const { title, subtitle, buttons = defaultButtons } = Astro.props;
 </style>
 
 <script>
-	import { LifecycleManager } from "@/utils/lifecycle-manager";
-
-	const lm = new LifecycleManager();
-
-	lm.onElementLoaded("hero", (ctx) => {
-		ctx?.add(() => {
+	document.addEventListener("DOMContentLoaded", () => {
+		const hero = document.querySelector("#hero");
+		if (hero) {
 			const scrollDownButton =
 				document.getElementById("scroll-down-button");
 
@@ -142,6 +139,6 @@ const { title, subtitle, buttons = defaultButtons } = Astro.props;
 			document
 				.querySelector("[data-hero-reveal]")
 				?.classList.add("visible");
-		});
+		}
 	});
 </script>

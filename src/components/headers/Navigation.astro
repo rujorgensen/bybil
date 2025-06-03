@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import { getLocalizedSettings } from "@/lib/localization-helpers";
 import { translatePath, unlocalizedUrl } from "@/lib/localization-helpers";
 import { defaultLocale, locales } from "site";
@@ -15,13 +14,8 @@ function isActiveLocale(locale: string): boolean {
 	return locale === currentLocale;
 }
 
-const { header, contacts } = getLocalizedSettings(currentLocale);
+const { header } = getLocalizedSettings(currentLocale);
 
-const logoPath = header.logo?.imagePath;
-
-const images = import.meta.glob<{ default: ImageMetadata }>(
-	"/src/assets/global/**/*.{webp,jpeg,jpg,png,gif,svg}",
-);
 ---
 
 <style>
@@ -314,109 +308,3 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 		</div>
 	</nav>
 </header>
-
-<script>
-	import { gsap } from "gsap";
-	import { ScrollTrigger } from "gsap/ScrollTrigger";
-	import { BlurPlugin } from "@/utils/gsap-blur";
-	import { LifecycleManager } from "@/utils/lifecycle-manager";
-
-	gsap.registerPlugin(
-		ScrollTrigger,
-		/*SplitText, DrawSVGPlugin,*/
-		BlurPlugin,
-	);
-
-	const lm = new LifecycleManager();
-
-	lm.onElementLoaded("navigation", (ctx) => {
-		ctx?.add(() => {
-			gsap.timeline({
-				defaults: {
-					ease: "power1.inOut",
-					stagger: 0.2,
-				},
-				scrollTrigger: {
-					trigger: "body",
-					start: "50px",
-					toggleActions: "play none none reverse",
-				},
-			})
-				.to("[data-company-name]", { opacity: 0 })
-				// .to("header .logo-path-mask", { drawSVG: 0 }, "<")
-				.to("header .logo-path-mask", { opacity: 0 }, "<")
-				.set("#header-logo", { pointerEvents: "none" });
-
-			const tl = gsap.timeline({
-				paused: true,
-				defaults: {
-					duration: 1,
-					ease: "power3.out",
-				},
-			});
-
-			// const childSplit = new SplitText("[data-nav-text-reveal]", {
-			// 	type: "lines",
-			// 	linesClass: "split-child",
-			// });
-			// const parentSplit = new SplitText("[data-nav-text-reveal]", {
-			// 	// type: "lines",
-			// 	linesClass: "split-parent",
-			// });
-
-			tl.set("#navigation", { pointerEvents: "auto" })
-				.to("#navigation-background", { opacity: 1 }, "<")
-				.to(
-					"[data-nav-text-reveal]",
-					{ opacity: 1, duration: 0.5, ease: "none" },
-					"<=0.5",
-				);
-			// .from(
-			// 	childSplit.lines,
-			// 	{
-			// 		duration: 1,
-			// 		yPercent: 300,
-			// 		skewY: 7,
-			// 		stagger: 0.02,
-			// 	},
-			// 	"<",
-			// );
-
-			const menuItems = gsap.utils.toArray(
-				"[data-nav-item]",
-			) as HTMLElement[];
-
-			menuItems.forEach((menuItem) => {
-				const menuItemTl = gsap
-					.timeline({
-						defaults: { duration: 0.4, ease: "none" },
-						paused: true,
-					})
-					.to(menuItem, {
-						blur: 2,
-					})
-					.to(menuItem, {
-						blur: 1,
-					});
-				menuItem.addEventListener("mouseenter", (e) =>
-					menuItemTl.play(),
-				);
-				menuItem.addEventListener("mouseleave", (e) =>
-					menuItemTl.pause(0),
-				);
-			});
-
-			// Get the checkbox
-			const menuToggle = document.getElementById("menu-toggle");
-
-			// Add an event listener to the checkbox
-			menuToggle?.addEventListener("change", function () {
-				if ((this as HTMLInputElement).checked) {
-					tl.play();
-				} else {
-					tl.reverse();
-				}
-			});
-		});
-	});
-</script>

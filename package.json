@@ -36,7 +36,6 @@
 		"@keystatic/core": "^0.5.47",
 		"alpinejs": "^3.14.9",
 		"astro": "4.7.0",
-		"gsap": "^3.13.0",
 		"keystatic-components": "^0.0.2",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1"
@@ -68,7 +67,6 @@
 	},
 	"packageManager": "bun@1.2.15",
 	"overrides": {
-		"gsap": "^3.13.0",
 		"sharp": "0.34.2"
 	}
 }
