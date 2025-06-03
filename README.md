@@ -1,12 +1,11 @@
-# [Mizar](https://mizar.majestico.co)
+# [bybil.nu](https://bybil.nu)
 
 <a href="https://astro.build/">![Astro](.github/images/astro-icon.png)</a>
 <a href="https://tailwindcss.com/">![Tailwind](.github/images/tailwind-icon.png)</a>
-<a href="https://alpinejs.dev/">![Alpine js](.github/images/alpine-icon.png)</a>
 
-Mizar is a template made with [Astro](https://astro.build), [Tailwind](https://tailwindcss.com/) and [AlpineJS](https://alpinejs.dev/).
+Mizar is a template made with [Astro](https://astro.build) and [Tailwind](https://tailwindcss.com/).
 
-### [🧪 Site preview →](https://mizar.majestico.co)
+### [🧪 Site preview →](https://bybil.nu)
 
 ### [🧑‍🚀 Astro website →](https://astro.build/)
 
@@ -29,11 +28,6 @@ On the folder run
 
 - [x] Localization
 - [x] PWA (thanks to vite-pwa)
-
-## ✍️ Admin dashboard
-
-For more information follow Keystatic documentation at [https://keystatic.com/docs/introduction](https://keystatic.com/docs/introduction)
-
 
 ---
 
