@@ -236,14 +236,6 @@ export default config({
 								},
 							},
 						}),
-						author: fields.relationship({
-							label: "Author",
-							description: "Autore della pagina",
-							collection: "authors",
-							validation: {
-								isRequired: true,
-							},
-						}),
 					},
 					{
 						label: "SEO",
@@ -579,12 +571,6 @@ export default config({
 							icon: GeneralIcon({ ariaHidden: true }),
 							schema: {},
 						}),
-						News: block({
-							label: "News",
-							description: "News section",
-							icon: GeneralIcon({ ariaHidden: true }),
-							schema: {},
-						}),
 						Contact: block({
 							label: "Contact",
 							description: "Contact form section",
@@ -649,14 +635,6 @@ export default config({
 				description: fields.text({
 					label: "Description",
 					multiline: true,
-					validation: {
-						isRequired: true,
-					},
-				}),
-				author: fields.relationship({
-					label: "Author",
-					description: "Autore dell'articolo",
-					collection: "authors",
 					validation: {
 						isRequired: true,
 					},
@@ -781,45 +759,6 @@ export default config({
 						},
 					},
 					components: {},
-				}),
-			},
-		}),
-		authors: collection({
-			label: "Authors",
-			slugField: "name",
-			path: "src/content/authors/*",
-			columns: ["name"],
-			previewUrl: "/author/{slug}",
-			format: { contentField: "content" },
-			schema: {
-				name: fields.slug({
-					name: {
-						label: "Name",
-						description: "Author's full name",
-						validation: {
-							isRequired: true,
-						},
-					},
-					// Optional slug label overrides
-					slug: {
-						label: "SEO-friendly slug",
-						description: "This will define the file/folder name for this entry",
-					},
-				}),
-				avatar: fields.image({
-					label: "Immagine di profilo",
-					directory: "src/assets/authors",
-					publicPath: "@/assets/authors/",
-				}),
-				content: fields.document({
-					label: "Content",
-					formatting: true,
-					dividers: true,
-					links: true,
-					images: {
-						directory: "src/assets/authors",
-						publicPath: "/src/assets/authors/",
-					},
 				}),
 			},
 		}),

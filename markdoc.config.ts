@@ -80,13 +80,6 @@ export default defineMarkdocConfig({
 			},
 			render: component("./src/components/sections/LogoCloud.astro"),
 		},
-		Services: {
-			attributes: {
-				title: { type: String, render: "title", required: true },
-				services: { type: Array, render: "services", required: true },
-			},
-			render: component("./src/components/sections/Services.astro"),
-		},
 		RecentWork: {
 			attributes: {
 				title: { type: String, render: "title", required: true },
@@ -119,10 +112,6 @@ export default defineMarkdocConfig({
 		Works: {
 			attributes: {},
 			render: component("./src/components/sections/Works.astro"),
-		},
-		News: {
-			attributes: {},
-			render: component("./src/components/sections/News.astro"),
 		},
 		Contact: {
 			attributes: {
