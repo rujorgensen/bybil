@@ -122,24 +122,21 @@ const { title, subtitle, buttons = defaultButtons } = Astro.props;
 </style>
 
 <script>
-	import { gsap } from "gsap";
-	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
 	import { LifecycleManager } from "@/utils/lifecycle-manager";
 
-	gsap.registerPlugin(ScrollToPlugin);
-
 	const lm = new LifecycleManager();
-
-	function scrollDown() {
-		gsap.to(window, { duration: 0.5, scrollTo: "#services" });
-	}
 
 	lm.onElementLoaded("hero", (ctx) => {
 		ctx?.add(() => {
 			const scrollDownButton =
 				document.getElementById("scroll-down-button");
-			scrollDownButton?.addEventListener("click", scrollDown);
+
+			scrollDownButton?.addEventListener("click", () => {
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth",
+				});
+			});
 
 			// Fade in the text
 			document
