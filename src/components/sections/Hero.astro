@@ -150,16 +150,18 @@ const { title, subtitle, buttons = defaultButtons } = Astro.props;
 
 	const interval = setInterval(() => {
 		const heroTextElements = getHeroTextElement();
+		let allOK = [];
 
 		// Fade in the hero text
 		for (const heroTextElement of heroTextElements) {
-			if (
-				heroTextElement &&
-				!heroTextElement.classList.contains("visible")
-			) {
+			if (!heroTextElement.classList.contains("visible")) {
 				doStuff();
-				clearInterval(interval);
+				allOK.push(true);
 			}
+		}
+
+		if (allOK.length === heroTextElements.length) {
+			clearInterval(interval);
 		}
 	}, 100);
 </script>
