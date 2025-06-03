@@ -2,7 +2,6 @@
 	"recommendations": [
 		"astro-build.astro-vscode",
 		"christian-kohler.path-intellisense",
-		"adrianwilczynski.alpine-js-intellisense",
 		"aaron-bond.better-comments",
 		"biomejs.biome",
 		"bradlc.vscode-tailwindcss",
