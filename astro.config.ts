@@ -9,6 +9,7 @@ import robotsTxt from "astro-robots-txt";
 import node from '@astrojs/node';
 import { defineConfig } from "astro/config";
 import { defaultLocale, locales, siteTitle, siteUrl } from "./site.config";
+import pkg from "./package.json";
 
 // https://astro.build/config
 export default defineConfig({
@@ -31,6 +32,7 @@ export default defineConfig({
 	vite: {
 		define: {
 			__DATE__: `'${new Date().toISOString()}'`,
+			__VERSION__: `'${pkg.version}'`,
 		},
 	},
 	integrations: [
