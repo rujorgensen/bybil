@@ -1,23 +1,15 @@
 // keystatic.config.ts
-import { collection, component, config, fields, singleton } from "@keystatic/core";
+import { collection, config, fields, singleton } from "@keystatic/core";
 import { block, wrapper } from "@keystatic/core/content-components";
 import IconList from "./.keystatic/icon-list.json";
 import {
 	ContactIcon,
-	ContactMapIcon,
 	ContainerFluidIcon,
 	ContainerIcon,
-	FeatureListIcon,
 	FlexboxIcon,
 	GeneralIcon,
 	HeroIcon,
-	HighlightsIcon,
-	ImageAsideIcon,
-	PopularServicesIcon,
-	PostListIcon,
 	ProseIcon,
-	TestimonialIcon,
-	TitleImageIcon,
 } from "./.keystatic/keystatic-icons";
 import { BrandMarkComponent } from "./.keystatic/mark";
 
