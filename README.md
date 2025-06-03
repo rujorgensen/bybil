@@ -28,13 +28,9 @@ On the folder run
 ## ✅ Features
 
 - [x] Localization
-- [x] Blog
-- [x] CMS for editing blog post (thanks to Keystatic)
 - [x] PWA (thanks to vite-pwa)
 
 ## ✍️ Admin dashboard
-
-You can access the admin dashboard for editing blog post at `/keystatic`
 
 For more information follow Keystatic documentation at [https://keystatic.com/docs/introduction](https://keystatic.com/docs/introduction)
 

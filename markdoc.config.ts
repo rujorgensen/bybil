@@ -67,25 +67,12 @@ export default defineMarkdocConfig({
 			},
 			render: component("./src/components/sections/Hero.astro"),
 		},
-		BlogLatest: {
-			attributes: {
-				title: { type: String, render: "title", required: true },
-			},
-			render: component("./src/components/sections/BlogLatest.astro"),
-		},
 		LogoCloud: {
 			attributes: {
 				title: { type: String, render: "title", required: true },
 				logos: { type: Array, render: "logos", required: true },
 			},
 			render: component("./src/components/sections/LogoCloud.astro"),
-		},
-		RecentWork: {
-			attributes: {
-				title: { type: String, render: "title", required: true },
-				buttons: { type: Array, render: "buttons", required: true },
-			},
-			render: component("./src/components/sections/RecentWork.astro"),
 		},
 		Testimonial: {
 			attributes: {
@@ -108,10 +95,6 @@ export default defineMarkdocConfig({
 				content: { type: String, render: "content", required: true },
 			},
 			render: component("./src/components/sections/About.astro"),
-		},
-		Works: {
-			attributes: {},
-			render: component("./src/components/sections/Works.astro"),
 		},
 		Contact: {
 			attributes: {
