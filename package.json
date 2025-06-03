@@ -40,7 +40,7 @@
 		"react-dom": "^18.3.1"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.7.3",
+		"@biomejs/biome": "1.9.4",
 		"@bobthered/tailwindcss-palette-generator": "^3.2.3",
 		"@cloudflare/workers-types": "^4.20240524.0",
 		"@iconify-json/ic": "^1.1.17",
