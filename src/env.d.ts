@@ -8,7 +8,6 @@ import type { CollectionEntry, ContentEntryMap } from "astro:content";
 
 declare global {
 	interface Window {
-		Alpine: import("alpinejs").Alpine;
 	}
 
 	interface HeaderSettings {

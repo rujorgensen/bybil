@@ -2,9 +2,8 @@
 
 <a href="https://astro.build/">![Astro](.github/images/astro-icon.png)</a>
 <a href="https://tailwindcss.com/">![Tailwind](.github/images/tailwind-icon.png)</a>
-<a href="https://alpinejs.dev/">![Alpine js](.github/images/alpine-icon.png)</a>
 
-Mizar is a template made with [Astro](https://astro.build), [Tailwind](https://tailwindcss.com/) and [AlpineJS](https://alpinejs.dev/).
+Mizar is a template made with [Astro](https://astro.build) and [Tailwind](https://tailwindcss.com/).
 
 ### [🧪 Site preview →](https://mizar.majestico.co)
 

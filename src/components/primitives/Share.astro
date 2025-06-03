@@ -35,32 +35,14 @@ const availableShare = [
 ---
 
 <div
-	x-data=`{
-			modalOpen: false,
-			openSocialModal() {
-				if (navigator.share) {
-					navigator
-						.share({
-							title: "Condividi",
-							url: window.location.href,
-						})
-						.then(() => {
-							console.log("Grazie per la condivisione!");
-						})
-						.catch(console.error);
-				} else {
-					this.modalOpen = true;
-				}
-			}
-		}`
-	@keydown.escape.window="modalOpen = false"
 	class="relative z-10 flex h-auto w-auto flex-wrap items-center gap-4"
+	id="share-component"
 >
 	<Button
 		class="flex gap-3"
 		size="md"
 		style="outline"
-		@click="openSocialModal()"
+		id="share-button"
 	>
 		<Icon size={22} name="ic:outline-share" />
 		<span>Condividi</span>
@@ -80,120 +62,91 @@ const availableShare = [
 		<Icon size={23} name="ic:sharp-vertical-align-top" />
 		<span class="hidden sm:inline-block">Torna all'inizio</span>
 	</Link>
+</div>
 
-	<template x-teleport="body">
-		<div
-			x-show="modalOpen"
-			class="fixed left-0 top-0 z-[99] flex h-screen w-screen items-center justify-center"
-			x-cloak
-		>
-			<div
-				x-show="modalOpen"
-				x-transition:enter="ease-out duration-300"
-				x-transition:enter-start="opacity-0"
-				x-transition:enter-end="opacity-100"
-				x-transition:leave="ease-in duration-300"
-				x-transition:leave-start="opacity-100"
-				x-transition:leave-end="opacity-0"
-				@click="modalOpen=false"
-				class="absolute inset-0 h-full w-full bg-black bg-opacity-40"
+<!-- Share Modal -->
+<div
+	id="share-modal"
+	class="fixed left-0 top-0 z-[99] flex h-screen w-screen items-center justify-center hidden"
+>
+	<div
+		id="modal-backdrop"
+		class="absolute inset-0 h-full w-full bg-black bg-opacity-40 opacity-0 transition-opacity duration-300"
+	>
+	</div>
+	<div
+		id="modal-content"
+		class="relative w-full bg-white px-7 py-6 sm:max-w-lg sm:rounded-lg opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95 transition-all duration-300"
+	>
+		<div class="flex items-center justify-between pb-2">
+			<h3 class="text-lg font-semibold">Condividi</h3>
+			<button
+				id="close-modal"
+				class="absolute right-0 top-0 mr-5 mt-5 flex h-8 w-8 items-center justify-center rounded-full text-gray-600 hover:bg-gray-50 hover:text-gray-800"
 			>
+				<svg
+					class="h-5 w-5"
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M6 18L18 6M6 6l12 12"></path>
+				</svg>
+			</button>
+		</div>
+		<div class="relative flex w-auto flex-col gap-8">
+			<div>
+				{
+					availableShare.map((shareBtn) => (
+						<Link href={shareBtn.url} target="_blank">
+							<Icon size={60} name={shareBtn.icon} />
+						</Link>
+					))
+				}
 			</div>
-			<div
-				x-show="modalOpen"
-				x-trap.inert.noscroll="modalOpen"
-				x-transition:enter="ease-out duration-300"
-				x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-				x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-				x-transition:leave="ease-in duration-200"
-				x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
-				x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-				class="relative w-full bg-white px-7 py-6 sm:max-w-lg sm:rounded-lg"
-			>
-				<div class="flex items-center justify-between pb-2">
-					<h3 class="text-lg font-semibold">Condividi</h3>
-					<button
-						@click="modalOpen=false"
-						class="absolute right-0 top-0 mr-5 mt-5 flex h-8 w-8 items-center justify-center rounded-full text-gray-600 hover:bg-gray-50 hover:text-gray-800"
-					>
+			<div class="flex items-center gap-4">
+				<input
+					id="url-input"
+					class="grow rounded-xl"
+					readonly
+				/>
+				<button type="button" id="copy-button">
+					<div class="clipboard-icon" id="clipboard-icon">
 						<svg
-							class="h-5 w-5"
-							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="32"
+							viewBox="0 0 16 32"
 							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
+							stroke="black"
+							xmlns="http://www.w3.org/2000/svg"
 						>
 							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M6 18L18 6M6 6l12 12"></path>
+								d="M3 12.75V4.25C3 3.42157 3.67157 2.75 4.5 2.75H12C12.8284 2.75 13.5 3.42157 13.5 4.25V12.75C13.5 13.5784 12.8284 14.25 12 14.25H4.5C3.67157 14.25 3 13.5784 3 12.75Z"
+							>
+							</path>
+							<path
+								d="M3 12.75V4.25C3 3.42157 3.67157 2.75 4.5 2.75H12C12.8284 2.75 13.5 3.42157 13.5 4.25V12.75C13.5 13.5784 12.8284 14.25 12 14.25H4.5C3.67157 14.25 3 13.5784 3 12.75Z"
+								class="page"
+							>
+							</path>
+							<path
+								d="M6.25 9.75L7.75 11.25L10.25 7.75"
+								class="check"></path>
+							<path
+								d="M7 1.75001C6.72386 1.75001 6.5 1.97387 6.5 2.25001V3.5C6.5 4.4665 7.2835 5.25 8.25 5.25C9.2165 5.25 10 4.4665 10 3.5V2.25C10 1.97386 9.77614 1.75 9.5 1.75L7 1.75001Z"
+							>
+							</path>
 						</svg>
-					</button>
-				</div>
-				<div class="relative flex w-auto flex-col gap-8">
-					<div>
-						{
-							availableShare.map((shareBtn) => (
-								<Link href={shareBtn.url} target="_blank">
-									<Icon size={60} name={shareBtn.icon} />
-								</Link>
-							))
-						}
 					</div>
-					<div
-						class="flex items-center gap-4"
-						x-data=`{
-							input: window.location.href,
-							copyToClipboard(input) {
-								$refs.clipboardInput.select();
-								$refs.clipboardIcon.classList.add('copied');
-								setTimeout((function() {
-									$refs.clipboardIcon.classList.remove('copied');
-								}).bind(this), 2000);
-								$clipboard(input);
-							}
-					 	}`
-					>
-						<input
-							class="grow rounded-xl"
-							x-ref="clipboardInput"
-							x-model="input"
-						/>
-						<button type="button" @click="copyToClipboard(input)">
-							<div class="clipboard-icon" x-ref="clipboardIcon">
-								<svg
-									width="16"
-									height="32"
-									viewBox="0 0 16 32"
-									fill="none"
-									stroke="black"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M3 12.75V4.25C3 3.42157 3.67157 2.75 4.5 2.75H12C12.8284 2.75 13.5 3.42157 13.5 4.25V12.75C13.5 13.5784 12.8284 14.25 12 14.25H4.5C3.67157 14.25 3 13.5784 3 12.75Z"
-									>
-									</path>
-									<path
-										d="M3 12.75V4.25C3 3.42157 3.67157 2.75 4.5 2.75H12C12.8284 2.75 13.5 3.42157 13.5 4.25V12.75C13.5 13.5784 12.8284 14.25 12 14.25H4.5C3.67157 14.25 3 13.5784 3 12.75Z"
-										class="page"
-									>
-									</path>
-									<path
-										d="M6.25 9.75L7.75 11.25L10.25 7.75"
-										class="check"></path>
-									<path
-										d="M7 1.75001C6.72386 1.75001 6.5 1.97387 6.5 2.25001V3.5C6.5 4.4665 7.2835 5.25 8.25 5.25C9.2165 5.25 10 4.4665 10 3.5V2.25C10 1.97386 9.77614 1.75 9.5 1.75L7 1.75001Z"
-									>
-									</path>
-								</svg>
-							</div>
-						</button>
-					</div>
-				</div>
+				</button>
 			</div>
 		</div>
-	</template>
+	</div>
 </div>
 
 <style>
@@ -258,27 +211,97 @@ const availableShare = [
 </style>
 
 <script>
-	const shareButton = document.querySelector(".share-button");
-	const shareDialog = document.querySelector(".share-dialog");
-	const closeButton = document.querySelector(".close-button");
+	document.addEventListener('DOMContentLoaded', function() {
+		const shareButton = document.getElementById('share-button');
+		const shareModal = document.getElementById('share-modal');
+		const modalBackdrop = document.getElementById('modal-backdrop');
+		const modalContent = document.getElementById('modal-content');
+		const closeModalButton = document.getElementById('close-modal');
+		const urlInput = document.getElementById('url-input');
+		const copyButton = document.getElementById('copy-button');
+		const clipboardIcon = document.getElementById('clipboard-icon');
 
-	shareButton?.addEventListener("click", (event) => {
-		if (navigator.share) {
-			navigator
-				.share({
-					title: "WebShare API Demo",
-					url: window.location.href,
-				})
-				.then(() => {
-					console.log("Thanks for sharing!");
-				})
-				.catch(console.error);
-		} else {
-			shareDialog?.classList.add("is-open");
+		// Initialize URL input value
+		if (urlInput) {
+			urlInput.value = window.location.href;
 		}
-	});
 
-	closeButton?.addEventListener("click", (event) => {
-		shareDialog?.classList.remove("is-open");
+		// Modal open/close functionality
+		function openModal() {
+			if (navigator.share) {
+				// Use native sharing if available
+				navigator
+					.share({
+						title: "Condividi",
+						url: window.location.href,
+					})
+					.then(() => {
+						console.log("Grazie per la condivisione!");
+					})
+					.catch(console.error);
+			} else {
+				// Show custom modal
+				shareModal?.classList.remove('hidden');
+				
+				// Trigger animations
+				setTimeout(() => {
+					modalBackdrop?.classList.add('opacity-100');
+					modalBackdrop?.classList.remove('opacity-0');
+					modalContent?.classList.add('opacity-100', 'translate-y-0', 'sm:scale-100');
+					modalContent?.classList.remove('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
+				}, 10);
+			}
+		}
+
+		function closeModal() {
+			// Trigger exit animations
+			modalBackdrop?.classList.add('opacity-0');
+			modalBackdrop?.classList.remove('opacity-100');
+			modalContent?.classList.add('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
+			modalContent?.classList.remove('opacity-100', 'translate-y-0', 'sm:scale-100');
+			
+			// Hide modal after animation
+			setTimeout(() => {
+				shareModal?.classList.add('hidden');
+			}, 300);
+		}
+
+		// Clipboard functionality
+		function copyToClipboard() {
+			if (urlInput) {
+				urlInput.select();
+				navigator.clipboard.writeText(urlInput.value).then(() => {
+					// Add copied animation
+					clipboardIcon?.classList.add('copied');
+					setTimeout(() => {
+						clipboardIcon?.classList.remove('copied');
+					}, 2000);
+				}).catch(() => {
+					// Fallback for older browsers
+					try {
+						document.execCommand('copy');
+						clipboardIcon?.classList.add('copied');
+						setTimeout(() => {
+							clipboardIcon?.classList.remove('copied');
+						}, 2000);
+					} catch (err) {
+						console.error('Could not copy text: ', err);
+					}
+				});
+			}
+		}
+
+		// Event listeners
+		shareButton?.addEventListener('click', openModal);
+		closeModalButton?.addEventListener('click', closeModal);
+		modalBackdrop?.addEventListener('click', closeModal);
+		copyButton?.addEventListener('click', copyToClipboard);
+
+		// Escape key handler
+		document.addEventListener('keydown', (event) => {
+			if (event.key === 'Escape' && !shareModal?.classList.contains('hidden')) {
+				closeModal();
+			}
+		});
 	});
 </script>
