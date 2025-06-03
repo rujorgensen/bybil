@@ -12,14 +12,6 @@
 			"link": "/about"
 		},
 		{
-			"title": "Portfolio",
-			"link": "/works"
-		},
-		{
-			"title": "News",
-			"link": "/news"
-		},
-		{
 			"title": "Contatti",
 			"link": "/contact"
 		}

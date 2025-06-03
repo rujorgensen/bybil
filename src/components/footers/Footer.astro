@@ -20,7 +20,6 @@ function isActiveLocale(locale: string): boolean {
 }
 
 const pages = await getCollection("pages");
-const services = await getCollection("services");
 const posts = await getCollection("posts");
 
 // get top 6 pages which are informational pages
@@ -37,21 +36,6 @@ const topInfoPages = pages
 		(page) =>
 			page.lang === currentLocale && page.data.type === "informational",
 	)
-	.slice(0, 6);
-
-const topServices = services
-	.map((page) => {
-		const [lang, ...slug] = page.slug.split("/");
-		return {
-			...page,
-			lang: lang,
-			slug: translatePath(
-				lang,
-				`/service${unlocalizedUrl(`/${page.slug}`)}`,
-			),
-		};
-	})
-	.filter((page) => page.lang === currentLocale)
 	.slice(0, 6);
 
 const lastPosts = posts

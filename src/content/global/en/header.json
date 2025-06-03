@@ -12,14 +12,6 @@
 			"link": "/about"
 		},
 		{
-			"title": "Works",
-			"link": "/works"
-		},
-		{
-			"title": "News",
-			"link": "/news"
-		},
-		{
 			"title": "Contacts",
 			"link": "/contact"
 		}

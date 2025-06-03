@@ -4,7 +4,7 @@ const server = Bun.serve({
 	port: 6122,
 	async fetch(req) {
 		const url = new URL(req.url);
-		const path = `./dist${url.pathname}`;
+		const path = `./dist/client${url.pathname}`;
 
 		try {
 			const file = Bun.file(path);
@@ -18,7 +18,7 @@ const server = Bun.serve({
 			const isSub = path.includes('/da/') || path.includes('/en/') || path.includes('/it/');
 
 			// Fallback to index.html for SPA routing
-			const fallback = Bun.file(isSub ? (`${path}index.html`) : './dist/index.html');
+			const fallback = Bun.file(isSub ? (`${path}client/index.html`) : './dist/client/index.html');
 
 			return new Response(fallback, {
 				headers: { 'Content-Type': 'text/html' },

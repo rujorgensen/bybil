@@ -1,5 +1,4 @@
 import alpinejs from "@astrojs/alpinejs";
-import cloudflare from "@astrojs/cloudflare";
 import markdoc from "@astrojs/markdoc";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
@@ -8,18 +7,16 @@ import keystatic from "@keystatic/astro";
 import AstroPWA from "@vite-pwa/astro";
 import icon from "astro-icon";
 import robotsTxt from "astro-robots-txt";
+import node from '@astrojs/node';
 import { defineConfig } from "astro/config";
 import { defaultLocale, locales, siteTitle, siteUrl } from "./site.config";
 
 // https://astro.build/config
 export default defineConfig({
 	site: siteUrl,
-	output: "hybrid",
-	adapter: cloudflare({
-		imageService: "compile",
-		experimental: {
-			manualChunks: ["sharp"],
-		},
+	output: "static",
+	adapter: node({
+		mode: 'standalone',
 	}),
 	compressHTML: true,
 	i18n: {

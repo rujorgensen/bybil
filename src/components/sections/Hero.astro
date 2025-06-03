@@ -110,34 +110,50 @@ const { title, subtitle, buttons = defaultButtons } = Astro.props;
 	[data-hero-reveal] {
 		opacity: 0;
 		filter: blur(3px);
+		transition:
+			opacity 1s ease,
+			filter 1s ease;
+	}
+
+	[data-hero-reveal].visible {
+		opacity: 1;
+		filter: blur(0);
 	}
 </style>
 
 <script>
-	import { gsap } from "gsap";
-	import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-	import { BlurPlugin } from "@/utils/gsap-blur";
-	import { LifecycleManager } from "@/utils/lifecycle-manager";
+	const getHeroTextElement = () =>
+		document.querySelector("[data-hero-reveal]");
 
-	gsap.registerPlugin(ScrollToPlugin, BlurPlugin);
+	const doStuff = () => {
+		const heroTextElement = getHeroTextElement();
 
-	const lm = new LifecycleManager();
-
-	function scrollDown() {
-		gsap.to(window, { duration: 0.5, scrollTo: "#services" });
-	}
-
-	lm.onElementLoaded("hero", (ctx) => {
-		ctx?.add(() => {
+		if (heroTextElement) {
 			const scrollDownButton =
 				document.getElementById("scroll-down-button");
-			scrollDownButton?.addEventListener("click", scrollDown);
 
-			gsap.to("[data-hero-reveal]", {
-				blur: 0,
-				duration: 1,
-				opacity: 1,
+			scrollDownButton?.addEventListener("click", () => {
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth",
+				});
 			});
-		});
-	});
+
+			// Fade in the hero text
+			heroTextElement.classList.add("visible");
+		}
+	};
+
+	document.addEventListener("DOMContentLoaded", doStuff);
+
+	const interval = setInterval(() => {
+		const heroTextElement = getHeroTextElement();
+		if (
+			heroTextElement &&
+			!heroTextElement.classList.contains("visible")
+		) {
+			doStuff();
+			clearInterval(interval);
+		}
+	}, 100);
 </script>
