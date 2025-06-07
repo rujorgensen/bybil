@@ -31,7 +31,7 @@
 		"@astrojs/tailwind": "6.0.2",
 		"@keystatic/astro": "^5.0.6",
 		"@keystatic/core": "^0.5.47",
-		"astro": "5.8.1",
+		"astro": "5.9.1",
 		"keystatic-components": "^0.0.2",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0"
@@ -54,7 +54,7 @@
 		"astro-icon": "^1.1.5",
 		"astro-robots-txt": "^1.0.0",
 		"astro-seo": "^0.8.4",
-		"satori": "^0.13.2",
+		"satori": "^0.14.0",
 		"sharp": "0.34.2",
 		"tailwindcss": "^3.4.3",
 		"workbox-window": "^7.3.0"
