@@ -39,13 +39,6 @@ export default defineMarkdocConfig({
 			children: ["*"],
 			render: component("./src/components/primitives/ContainerFluid.astro"),
 		},
-		Prose: {
-			attributes: {
-				class: { type: String, render: "class" },
-			},
-			children: ["*"],
-			render: component("./src/components/primitives/Prose.astro"),
-		},
 		Flex: {
 			attributes: {
 				class: { type: String, render: "class" },

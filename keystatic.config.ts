@@ -1,7 +1,6 @@
 // keystatic.config.ts
 import { collection, config, fields, singleton } from "@keystatic/core";
 import { block, wrapper } from "@keystatic/core/content-components";
-import IconList from "./.keystatic/icon-list.json";
 import {
 	ContactIcon,
 	ContainerFluidIcon,
@@ -9,7 +8,6 @@ import {
 	FlexboxIcon,
 	GeneralIcon,
 	HeroIcon,
-	ProseIcon,
 } from "./.keystatic/keystatic-icons";
 import { BrandMarkComponent } from "./.keystatic/mark";
 
@@ -244,16 +242,6 @@ export default config({
 							label: "Contenitore largo",
 							icon: ContainerFluidIcon({ ariaHidden: true }),
 							description: "Contenitore che ti consente di avere del margine a destra e sinistra",
-							schema: {
-								class: fields.text({
-									label: "Classi custom",
-								}),
-							},
-						}),
-						Prose: wrapper({
-							label: "Prosa",
-							icon: ProseIcon({ ariaHidden: true }),
-							description: "Contenitore di testo, ideale per blog o per contenuti informativi",
 							schema: {
 								class: fields.text({
 									label: "Classi custom",
