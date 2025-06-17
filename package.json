@@ -1,7 +1,7 @@
 {
 	"name": "bybil",
 	"type": "module",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"private": false,
 	"repository": {
 		"type": "git",
@@ -11,7 +11,6 @@
 	"homepage": "https://bybil.nu",
 	"scripts": {
 		"dev": "astro dev",
-		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
@@ -26,12 +25,12 @@
 		"@astrojs/markdoc": "^0.15.0",
 		"@astrojs/node": "9.2.2",
 		"@astrojs/react": "4.3.0",
-		"@astrojs/rss": "^4.0.11",
-		"@astrojs/sitemap": "^3.4.0",
+		"@astrojs/rss": "^4.0.12",
+		"@astrojs/sitemap": "^3.4.1",
 		"@astrojs/tailwind": "6.0.2",
 		"@keystatic/astro": "^5.0.6",
 		"@keystatic/core": "^0.5.47",
-		"astro": "5.8.1",
+		"astro": "5.9.3",
 		"keystatic-components": "^0.0.2",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0"
@@ -47,19 +46,19 @@
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/forms": "^0.5.10",
 		"@tailwindcss/typography": "^0.5.16",
-		"@types/react": "^19.1.6",
-		"@types/react-dom": "^19.1.5",
+		"@types/react": "^19.1.8",
+		"@types/react-dom": "^19.1.6",
 		"@vite-pwa/assets-generator": "^1.0.0",
 		"@vite-pwa/astro": "^1.1.0",
 		"astro-icon": "^1.1.5",
 		"astro-robots-txt": "^1.0.0",
 		"astro-seo": "^0.8.4",
-		"satori": "^0.13.2",
+		"satori": "^0.15.2",
 		"sharp": "0.34.2",
 		"tailwindcss": "^3.4.3",
 		"workbox-window": "^7.3.0"
 	},
-	"packageManager": "bun@1.2.15",
+	"packageManager": "bun@1.2.16",
 	"overrides": {
 		"sharp": "0.34.2"
 	}
