@@ -36,7 +36,7 @@
 		"react-dom": "^19.1.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "2.0.6",
 		"@bobthered/tailwindcss-palette-generator": "^4.0.0",
 		"@iconify-json/ic": "^1.2.2",
 		"@iconify-json/iconamoon": "^1.2.2",
