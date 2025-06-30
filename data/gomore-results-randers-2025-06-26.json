@@ -1,0 +1,726 @@
+{
+  "status": "success",
+  "data": {
+    "latitude": 56.460584,
+    "longitude": 10.036539,
+    "radius_meters": null,
+    "count": 12,
+    "hits": [
+      {
+        "handover_text": "Meet the owner",
+        "average_daily_rate": "518.00",
+        "car_year": 2020,
+        "instant_booking_text": "Booking request",
+        "downplay": false,
+        "avatar_picture": "https://gomore.imgix.net/uploads/user/avatar/78849/avatar_1388227558.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&crop=faces&fit=crop&h=160&w=160",
+        "delivery": false,
+        "owner_first_name": "Peter",
+        "rate": "300.00",
+        "owner_acceptance_rate": 0.0,
+        "formatted_location": "8520 Lystrup",
+        "short_period_price": "437.00",
+        "pictures": [
+          "https://gomore.imgix.net/uploads/car_picture/image/500609/car_4e642cf1-99db-4923-a1f2-b5e732d031c3.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/500613/car_a7f7e494-5cac-4565-a711-4cae2f822837.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/500612/car_33198086-1d51-469d-ac5a-1ad3bf88c9cd.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/500614/car_98c55b30-e548-45ef-8c83-a518f5629073.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/500615/car_524780da-1bd8-4b2a-aabf-82c6f38fd207.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/500610/car_c8fa2f5a-4ea8-41f7-b7b4-9015163ddbd1.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/500616/car_12bf7d41-78f3-406a-b9e2-62cc90eaa03e.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/500617/car_8754bea7-fa1d-44e2-ad4a-94d507777ea7.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/500618/car_6a5d8513-3844-4c95-9ab8-7d94ae568458.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/500619/car_77fba095-f1ea-4283-9eb9-53e7f95e2645.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/500620/car_d814b273-226c-4c2e-9022-36972ce35789.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770"
+        ],
+        "id": 278741,
+        "lon": 10.19032119375,
+        "lat": 56.236368800251995,
+        "period": {
+          "start_date_time": "2025-07-09T07:30:00Z",
+          "end_date_time": "2025-07-09T15:00:00Z"
+        },
+        "keyless": false,
+        "favorite": false,
+        "instant_booking": false,
+        "rating_row": {
+          "identifier": "result-278741",
+          "elements": [
+            {
+              "identifier": "result-278741-pre",
+              "atom": {
+                "type": "label",
+                "text": "5.0",
+                "style": "body_m_strong"
+              }
+            },
+            {
+              "identifier": "result-278741-star",
+              "atom": {
+                "type": "image",
+                "url": "https://gomore.imgix.net/images/icons/star-filled-no-tint.svg",
+                "style": {
+                  "width": 16,
+                  "height": 16
+                }
+              }
+            },
+            {
+              "identifier": "result-278741-post",
+              "atom": {
+                "type": "label",
+                "text": "1 rating",
+                "style": "body_s"
+              }
+            }
+          ]
+        },
+        "model": "Seat Mii 2020",
+        "currency_code": "DKK"
+      },
+      {
+        "handover_text": "Meet the owner",
+        "top_feature": "Initial charge included",
+        "average_daily_rate": "518.00",
+        "car_year": 2021,
+        "instant_booking_text": "Booking request",
+        "downplay": false,
+        "avatar_picture": "https://gomore.imgix.net/uploads/user/avatar/864665/avatar_1661664652.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&crop=faces&fit=crop&h=160&w=160",
+        "delivery": false,
+        "owner_first_name": "Kenneth",
+        "rate": "300.00",
+        "owner_acceptance_rate": 0.5,
+        "formatted_location": "9500 Hobro",
+        "short_period_price": "437.00",
+        "pictures": [
+          "https://gomore.imgix.net/uploads/car_picture/image/1162690/car_1737798574.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1162807/car_1737805674.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1162809/car_1737805676.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1162808/car_1737805675.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770"
+        ],
+        "id": 812202,
+        "lon": 9.776951612500001,
+        "lat": 56.65350069940599,
+        "period": {
+          "start_date_time": "2025-07-09T07:30:00Z",
+          "end_date_time": "2025-07-09T15:00:00Z"
+        },
+        "keyless": false,
+        "favorite": false,
+        "instant_booking": false,
+        "rating_row": {
+          "identifier": "result-812202",
+          "elements": [
+            {
+              "identifier": "result-812202-pre",
+              "atom": {
+                "type": "label",
+                "text": "5.0",
+                "style": "body_m_strong"
+              }
+            },
+            {
+              "identifier": "result-812202-star",
+              "atom": {
+                "type": "image",
+                "url": "https://gomore.imgix.net/images/icons/star-filled-no-tint.svg",
+                "style": {
+                  "width": 16,
+                  "height": 16
+                }
+              }
+            },
+            {
+              "identifier": "result-812202-post",
+              "atom": {
+                "type": "label",
+                "text": "1 rating",
+                "style": "body_s"
+              }
+            }
+          ]
+        },
+        "model": "Volkswagen E-UP! 2021",
+        "currency_code": "DKK"
+      },
+      {
+        "handover_text": "Meet the owner",
+        "average_daily_rate": "764.00",
+        "car_year": 2017,
+        "instant_booking_text": "Booking request",
+        "downplay": false,
+        "avatar_picture": "https://gomore.imgix.net/uploads/user/avatar/3166380/avatar_1670716887.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&crop=faces&fit=crop&h=160&w=160",
+        "delivery": true,
+        "owner_first_name": "Jacob",
+        "rate": "455.00",
+        "owner_acceptance_rate": 0.3333333333333333,
+        "formatted_location": "8200 Aarhus",
+        "short_period_price": "645.00",
+        "pictures": [
+          "https://gomore.imgix.net/uploads/car_picture/image/1156870/car_1737024833.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1156872/car_1737024875.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1156873/car_1737024879.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1156874/car_1737024879.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1156875/car_1737024894.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1156876/car_1737024913.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770"
+        ],
+        "id": 808025,
+        "lon": 10.157488175,
+        "lat": 56.220884000701986,
+        "period": {
+          "start_date_time": "2025-07-09T07:30:00Z",
+          "end_date_time": "2025-07-09T15:00:00Z"
+        },
+        "keyless": false,
+        "favorite": false,
+        "instant_booking": false,
+        "rating_row": {
+          "identifier": "result-808025",
+          "elements": [
+            {
+              "identifier": "result-808025-text",
+              "atom": {
+                "type": "label",
+                "text": "No ratings yet",
+                "style": "body_s"
+              }
+            }
+          ]
+        },
+        "model": "Volkswagen e-Golf 2017",
+        "currency_code": "DKK"
+      },
+      {
+        "handover_text": "Meet the owner",
+        "top_feature": "Initial charge included",
+        "average_daily_rate": "621.00",
+        "car_year": 2022,
+        "instant_booking_text": "Booking request",
+        "downplay": false,
+        "avatar_picture": "https://gomore.imgix.net/uploads/user/avatar/3360742/avatar_1654498892.jpeg?ixlib=rails-4.3.1&auto=format%2Ccompress&crop=faces&fit=crop&h=160&w=160",
+        "delivery": false,
+        "owner_first_name": "Bettina",
+        "rate": "365.00",
+        "owner_acceptance_rate": 0.5,
+        "formatted_location": "8250 Egå",
+        "short_period_price": "524.00",
+        "pictures": [
+          "https://gomore.imgix.net/uploads/car_picture/image/934596/car_1712760087.jpeg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770"
+        ],
+        "id": 613213,
+        "lon": 10.2683486875,
+        "lat": 56.20642849942399,
+        "period": {
+          "start_date_time": "2025-07-09T07:30:00Z",
+          "end_date_time": "2025-07-09T15:00:00Z"
+        },
+        "keyless": false,
+        "favorite": false,
+        "instant_booking": false,
+        "rating_row": {
+          "identifier": "result-613213",
+          "elements": [
+            {
+              "identifier": "result-613213-pre",
+              "atom": {
+                "type": "label",
+                "text": "5.0",
+                "style": "body_m_strong"
+              }
+            },
+            {
+              "identifier": "result-613213-star",
+              "atom": {
+                "type": "image",
+                "url": "https://gomore.imgix.net/images/icons/star-filled-no-tint.svg",
+                "style": {
+                  "width": 16,
+                  "height": 16
+                }
+              }
+            },
+            {
+              "identifier": "result-613213-post",
+              "atom": {
+                "type": "label",
+                "text": "15 ratings",
+                "style": "body_s"
+              }
+            }
+          ]
+        },
+        "model": "Volkswagen ID.3 2022",
+        "currency_code": "DKK"
+      },
+      {
+        "handover_text": "Keyless",
+        "top_feature": "Initial charge included",
+        "average_daily_rate": "612.00",
+        "car_year": 2020,
+        "instant_booking_text": "Instant booking",
+        "downplay": false,
+        "avatar_picture": "https://gomore.imgix.net/uploads/user/avatar/894677/1fb8a97d-164a-41c4-8b8f-5fa27a3cc7d7.jpeg?ixlib=rails-4.3.1&auto=format%2Ccompress&crop=faces&fit=crop&h=160&w=160",
+        "delivery": false,
+        "owner_first_name": "Tobias",
+        "rate": "340.00",
+        "owner_acceptance_rate": 1.0,
+        "formatted_location": "8200 Aarhus",
+        "short_period_price": "517.00",
+        "pictures": [
+          "https://gomore.imgix.net/uploads/car_picture/image/1293559/car_1747852411.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1293560/car_1747852448.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1293561/car_1747852463.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1293562/car_1747852478.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1293563/car_1747852512.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1293564/car_1747852548.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770"
+        ],
+        "id": 936259,
+        "lon": 10.217101968749999,
+        "lat": 56.171170800828,
+        "period": {
+          "start_date_time": "2025-07-09T07:30:00Z",
+          "end_date_time": "2025-07-09T15:00:00Z"
+        },
+        "keyless": true,
+        "favorite": false,
+        "instant_booking": true,
+        "rating_row": {
+          "identifier": "result-936259",
+          "elements": [
+            {
+              "identifier": "result-936259-pre",
+              "atom": {
+                "type": "label",
+                "text": "5.0",
+                "style": "body_m_strong"
+              }
+            },
+            {
+              "identifier": "result-936259-star",
+              "atom": {
+                "type": "image",
+                "url": "https://gomore.imgix.net/images/icons/star-filled-no-tint.svg",
+                "style": {
+                  "width": 16,
+                  "height": 16
+                }
+              }
+            },
+            {
+              "identifier": "result-936259-post",
+              "atom": {
+                "type": "label",
+                "text": "6 ratings",
+                "style": "body_s"
+              }
+            }
+          ]
+        },
+        "model": "MINI Cooper 2020",
+        "currency_code": "DKK"
+      },
+      {
+        "handover_text": "Meet the owner",
+        "average_daily_rate": "637.00",
+        "car_year": 2020,
+        "instant_booking_text": "Booking request",
+        "downplay": false,
+        "avatar_picture": "https://gomore.imgix.net/uploads/user/avatar/832873/avatar_1684934927.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&crop=faces&fit=crop&h=160&w=160",
+        "delivery": false,
+        "owner_first_name": "Kalle",
+        "rate": "375.00",
+        "owner_acceptance_rate": 0.125,
+        "formatted_location": "8200 Aarhus",
+        "short_period_price": "538.00",
+        "pictures": [
+          "https://gomore.imgix.net/uploads/car_picture/image/768635/car_9ffd15f0-19d6-4229-87bb-6e8f6bb0ff49.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/768636/car_83b9d5f6-9beb-4d8f-913f-85268f712c0c.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/768637/car_70bfd80e-128b-4189-9fad-c04f494e263c.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/768638/car_f34fe880-043b-4fa3-982a-54ac5a6a2bff.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/768639/car_76ca1c0e-46db-4d32-8344-bd99cbddee9c.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/768640/car_0b79e91a-3f32-4a31-90c1-12bcee56724d.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770"
+        ],
+        "id": 486729,
+        "lon": 10.218643712499999,
+        "lat": 56.169140299460004,
+        "period": {
+          "start_date_time": "2025-07-09T07:30:00Z",
+          "end_date_time": "2025-07-09T15:00:00Z"
+        },
+        "keyless": false,
+        "favorite": false,
+        "instant_booking": false,
+        "rating_row": {
+          "identifier": "result-486729",
+          "elements": [
+            {
+              "identifier": "result-486729-pre",
+              "atom": {
+                "type": "label",
+                "text": "5.0",
+                "style": "body_m_strong"
+              }
+            },
+            {
+              "identifier": "result-486729-star",
+              "atom": {
+                "type": "image",
+                "url": "https://gomore.imgix.net/images/icons/star-filled-no-tint.svg",
+                "style": {
+                  "width": 16,
+                  "height": 16
+                }
+              }
+            },
+            {
+              "identifier": "result-486729-post",
+              "atom": {
+                "type": "label",
+                "text": "3 ratings",
+                "style": "body_s"
+              }
+            }
+          ]
+        },
+        "model": "Volkswagen ID.3 2020",
+        "currency_code": "DKK"
+      },
+      {
+        "handover_text": "Meet the owner",
+        "top_feature": "Initial charge included",
+        "average_daily_rate": "581.00",
+        "car_year": 2021,
+        "instant_booking_text": "Booking request",
+        "downplay": false,
+        "avatar_picture": "https://gomore.imgix.net/uploads/user/avatar/3485169/d2a42ab7-216a-4bb9-903f-0521d50f273a.jpeg?ixlib=rails-4.3.1&auto=format%2Ccompress&crop=faces&fit=crop&h=160&w=160",
+        "delivery": false,
+        "owner_first_name": "Lucie",
+        "rate": "340.00",
+        "owner_acceptance_rate": 0.3333333333333333,
+        "formatted_location": "8000 Aarhus",
+        "short_period_price": "491.00",
+        "pictures": [
+          "https://gomore.imgix.net/uploads/car_picture/image/948616/car_1714913322.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/948617/car_1714913322.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/948618/car_1714913322.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/948621/car_1714913324.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/948622/car_1714913324.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/948619/car_1714913323.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/948620/car_1714913323.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/948624/car_1714913325.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/948626/car_1714913325.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/948625/car_1714913325.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/948623/car_1714913325.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/948627/car_1714913325.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770"
+        ],
+        "id": 621265,
+        "lon": 10.1851652875,
+        "lat": 56.157314400234,
+        "period": {
+          "start_date_time": "2025-07-09T07:30:00Z",
+          "end_date_time": "2025-07-09T15:00:00Z"
+        },
+        "keyless": false,
+        "favorite": false,
+        "instant_booking": false,
+        "rating_row": {
+          "identifier": "result-621265",
+          "elements": [
+            {
+              "identifier": "result-621265-pre",
+              "atom": {
+                "type": "label",
+                "text": "4.9",
+                "style": "body_m_strong"
+              }
+            },
+            {
+              "identifier": "result-621265-star",
+              "atom": {
+                "type": "image",
+                "url": "https://gomore.imgix.net/images/icons/star-filled-no-tint.svg",
+                "style": {
+                  "width": 16,
+                  "height": 16
+                }
+              }
+            },
+            {
+              "identifier": "result-621265-post",
+              "atom": {
+                "type": "label",
+                "text": "14 ratings",
+                "style": "body_s"
+              }
+            }
+          ]
+        },
+        "model": "Volkswagen ID.3 2021",
+        "currency_code": "DKK"
+      },
+      {
+        "handover_text": "Meet the owner",
+        "average_daily_rate": "676.00",
+        "car_year": 2021,
+        "instant_booking_text": "Booking request",
+        "downplay": false,
+        "avatar_picture": null,
+        "delivery": false,
+        "owner_first_name": "Thommy",
+        "rate": "400.00",
+        "owner_acceptance_rate": 0.25,
+        "formatted_location": "8000 Aarhus",
+        "short_period_price": "571.00",
+        "pictures": [
+          "https://gomore.imgix.net/uploads/car_picture/image/1316260/car_1748958710.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770"
+        ],
+        "id": 963825,
+        "lon": 10.19367280625,
+        "lat": 56.153906999766,
+        "period": {
+          "start_date_time": "2025-07-09T07:30:00Z",
+          "end_date_time": "2025-07-09T15:00:00Z"
+        },
+        "keyless": false,
+        "favorite": false,
+        "instant_booking": false,
+        "rating_row": {
+          "identifier": "result-963825",
+          "elements": [
+            {
+              "identifier": "result-963825-text",
+              "atom": {
+                "type": "label",
+                "text": "No ratings yet",
+                "style": "body_s"
+              }
+            }
+          ]
+        },
+        "model": "Volkswagen ID.3 2021",
+        "currency_code": "DKK"
+      },
+      {
+        "handover_text": "Keyless",
+        "average_daily_rate": "553.00",
+        "car_year": 2022,
+        "instant_booking_text": "Instant booking",
+        "downplay": false,
+        "avatar_picture": "https://gomore.imgix.net/uploads/user/avatar/2629076/avatar_1560073969.jpeg?ixlib=rails-4.3.1&auto=format%2Ccompress&crop=faces&fit=crop&h=160&w=160",
+        "delivery": false,
+        "owner_first_name": "Martin",
+        "rate": "310.00",
+        "owner_acceptance_rate": 1.0,
+        "formatted_location": "8000 Aarhus",
+        "short_period_price": "467.00",
+        "pictures": [
+          "https://gomore.imgix.net/uploads/car_picture/image/1280266/car_1747073824.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1280267/car_1747073891.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1280268/car_1747073902.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1280269/car_1747073931.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1280270/car_1747073944.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770",
+          "https://gomore.imgix.net/uploads/car_picture/image/1280271/car_1747073964.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770"
+        ],
+        "id": 922857,
+        "lon": 10.1842053125,
+        "lat": 56.146139300648,
+        "period": {
+          "start_date_time": "2025-07-09T07:30:00Z",
+          "end_date_time": "2025-07-09T15:00:00Z"
+        },
+        "keyless": true,
+        "favorite": false,
+        "instant_booking": true,
+        "rating_row": {
+          "identifier": "result-922857",
+          "elements": [
+            {
+              "identifier": "result-922857-text",
+              "atom": {
+                "type": "label",
+                "text": "No ratings yet",
+                "style": "body_s"
+              }
+            }
+          ]
+        },
+        "model": "Volkswagen ID.3 2022",
+        "currency_code": "DKK"
+      },
+      {
+        "handover_text": "Meet the owner",
+        "average_daily_rate": "518.00",
+        "car_year": 2024,
+        "instant_booking_text": "Booking request",
+        "downplay": false,
+        "avatar_picture": "https://gomore.imgix.net/uploads/user/avatar/4014749/1e7cc726-613f-467c-95f9-4d65acc1a858.jpeg?ixlib=rails-4.3.1&auto=format%2Ccompress&crop=faces&fit=crop&h=160&w=160",
+        "delivery": false,
+        "owner_first_name": "Maia Helena",
+        "rate": "300.00",
+        "owner_acceptance_rate": 0.0,
+        "formatted_location": "8000 Aarhus",
+        "short_period_price": "437.00",
+        "pictures": [
+          "https://gomore.imgix.net/uploads/car_picture/image/1253466/car_1745687180.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770"
+        ],
+        "id": 891791,
+        "lon": 10.2014829375,
+        "lat": 56.146516600198,
+        "period": {
+          "start_date_time": "2025-07-09T07:30:00Z",
+          "end_date_time": "2025-07-09T15:00:00Z"
+        },
+        "keyless": false,
+        "favorite": false,
+        "instant_booking": false,
+        "rating_row": {
+          "identifier": "result-891791",
+          "elements": [
+            {
+              "identifier": "result-891791-text",
+              "atom": {
+                "type": "label",
+                "text": "No ratings yet",
+                "style": "body_s"
+              }
+            }
+          ]
+        },
+        "model": "Fiat 500E 2024",
+        "currency_code": "DKK"
+      },
+      {
+        "handover_text": "Keyless",
+        "average_daily_rate": "657.00",
+        "car_year": 2020,
+        "instant_booking_text": "Instant booking",
+        "downplay": false,
+        "avatar_picture": "https://gomore.imgix.net/uploads/user/avatar/127566/avatar_1473925267.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&crop=faces&fit=crop&h=160&w=160",
+        "delivery": false,
+        "owner_first_name": "Simon",
+        "rate": "375.00",
+        "owner_acceptance_rate": 1.0,
+        "formatted_location": "8000 Aarhus",
+        "short_period_price": "555.00",
+        "pictures": [
+          "https://gomore.imgix.net/uploads/car_picture/image/849705/car_1696840932.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770"
+        ],
+        "id": 539263,
+        "lon": 10.203656287500001,
+        "lat": 56.143455400126,
+        "period": {
+          "start_date_time": "2025-07-09T07:30:00Z",
+          "end_date_time": "2025-07-09T15:00:00Z"
+        },
+        "keyless": true,
+        "favorite": false,
+        "instant_booking": true,
+        "rating_row": {
+          "identifier": "result-539263",
+          "elements": [
+            {
+              "identifier": "result-539263-pre",
+              "atom": {
+                "type": "label",
+                "text": "5.0",
+                "style": "body_m_strong"
+              }
+            },
+            {
+              "identifier": "result-539263-star",
+              "atom": {
+                "type": "image",
+                "url": "https://gomore.imgix.net/images/icons/star-filled-no-tint.svg",
+                "style": {
+                  "width": 16,
+                  "height": 16
+                }
+              }
+            },
+            {
+              "identifier": "result-539263-post",
+              "atom": {
+                "type": "label",
+                "text": "59 ratings",
+                "style": "body_s"
+              }
+            }
+          ]
+        },
+        "model": "Renault Zoe 2020",
+        "currency_code": "DKK"
+      },
+      {
+        "handover_text": "Meet the owner",
+        "average_daily_rate": "518.00",
+        "car_year": 2024,
+        "instant_booking_text": "Booking request",
+        "downplay": false,
+        "avatar_picture": null,
+        "delivery": false,
+        "owner_first_name": "Mathilde",
+        "rate": "300.00",
+        "owner_acceptance_rate": null,
+        "formatted_location": "8270 Højbjerg",
+        "short_period_price": "437.00",
+        "pictures": [
+          "https://gomore.imgix.net/uploads/car_picture/image/1354144/car_1750578476.jpg?ixlib=rails-4.3.1&auto=format%2Ccompress&fit=crop&h=513&w=770"
+        ],
+        "id": 1011936,
+        "lon": 10.222477187500001,
+        "lat": 56.111893700288,
+        "period": {
+          "start_date_time": "2025-07-09T07:30:00Z",
+          "end_date_time": "2025-07-09T15:00:00Z"
+        },
+        "keyless": false,
+        "favorite": false,
+        "instant_booking": false,
+        "rating_row": {
+          "identifier": "result-1011936",
+          "elements": [
+            {
+              "identifier": "result-1011936-text",
+              "atom": {
+                "type": "label",
+                "text": "New on GoMore",
+                "style": "body_s"
+              }
+            }
+          ]
+        },
+        "model": "Fiat 500E 2024",
+        "currency_code": "DKK"
+      }
+    ],
+    "precise_search_query": false,
+    "high_demand_warning_text": "You are looking for a car in a period with high demand. We recommend booking soon.",
+    "filters": {
+      "shortcuts": [
+        {
+          "title": "Instant booking",
+          "selected": false,
+          "server_key": "instant_booking",
+          "server_value": "true"
+        },
+        {
+          "title": "Dedicated parking",
+          "selected": false,
+          "server_key": "dedicated_parking_options",
+          "server_value": "dedicated"
+        },
+        {
+          "title": "Sort by: Nearest",
+          "selected": false,
+          "server_key": "sort_by",
+          "server_value": "distance"
+        },
+        {
+          "title": "Sort by: Cheapest",
+          "selected": false,
+          "server_key": "sort_by",
+          "server_value": "price_asc"
+        }
+      ]
+    }
+  }
+}
