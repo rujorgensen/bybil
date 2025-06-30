@@ -1,8 +1,8 @@
 ---
-import Button from "@/components/primitives/Button.astro";
-import Link from "@/components/primitives/Link.astro";
-import { getLocalizedSettings } from "@/lib/localization-helpers";
-import { Icon } from "astro-icon/components";
+import Button from '@/components/primitives/Button.astro';
+import Link from '@/components/primitives/Link.astro';
+import { getLocalizedSettings } from '@/lib/localization-helpers';
+import { Icon } from 'astro-icon/components';
 
 const currentLocale = Astro.currentLocale;
 
@@ -12,23 +12,23 @@ const currentPage = Astro.url;
 
 const availableShare = [
 	{
-		name: "Facebook",
-		icon: "ic:baseline-facebook",
+		name: 'Facebook',
+		icon: 'ic:baseline-facebook',
 		url: `https://www.facebook.com/sharer/sharer.php?u=${currentPage}`,
 	},
 	{
-		name: "Twitter",
-		icon: "mdi:twitter",
+		name: 'Twitter',
+		icon: 'mdi:twitter',
 		url: `https://twitter.com/intent/tweet?url=${currentPage}`,
 	},
 	{
-		name: "LinkedIn",
-		icon: "mdi:linkedin",
+		name: 'LinkedIn',
+		icon: 'mdi:linkedin',
 		url: `https://www.linkedin.com/shareArticle?mini=true&url=${currentPage}`,
 	},
 	{
-		name: "Email",
-		icon: "ic:baseline-email",
+		name: 'Email',
+		icon: 'ic:baseline-email',
 		url: `mailto:?subject=Check%20out%20this%20article&body=${currentPage}`,
 	},
 ];

@@ -1,25 +1,39 @@
-import { tailwindcssPaletteGenerator } from "@bobthered/tailwindcss-palette-generator";
-import aspectRatio from "@tailwindcss/aspect-ratio";
-import forms from "@tailwindcss/forms";
-import typography from "@tailwindcss/typography";
-import type { Config } from "tailwindcss";
-import defaultTheme from "tailwindcss/defaultTheme";
-import type { PluginAPI } from "tailwindcss/types/config";
-import style from "./src/content/global/style.json";
+import { tailwindcssPaletteGenerator } from '@bobthered/tailwindcss-palette-generator';
+import aspectRatio from '@tailwindcss/aspect-ratio';
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
+import type { PluginAPI } from 'tailwindcss/types/config';
+import style from './src/content/global/style.json';
 
 const config: Config = {
-	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+	content: [
+		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+	],
 	theme: {
 		screens: {
-			xs: "400px",
+			xs: '400px',
 			...defaultTheme.screens,
 		},
 		extend: {
-			colors: tailwindcssPaletteGenerator([style.theme.colors.primary, style.theme.colors.secondary]),
+			colors: tailwindcssPaletteGenerator([
+				style.theme.colors.primary,
+				style.theme.colors.secondary,
+			]),
 			fontFamily: {
-				sans: ["Inter Tight", ...defaultTheme.fontFamily.sans],
-				mono: ["Space Mono", ...defaultTheme.fontFamily.mono],
-				display: ["Montserrat", ...defaultTheme.fontFamily.sans],
+				sans: [
+					'Inter Tight',
+					...defaultTheme.fontFamily.sans,
+				],
+				mono: [
+					'Space Mono',
+					...defaultTheme.fontFamily.mono,
+				],
+				display: [
+					'Montserrat',
+					...defaultTheme.fontFamily.sans,
+				],
 			},
 		},
 	},
@@ -28,7 +42,7 @@ const config: Config = {
 		forms,
 		aspectRatio,
 		({ addVariant }: PluginAPI) => {
-			addVariant("touch", "@media (pointer: coarse)");
+			addVariant('touch', '@media (pointer: coarse)');
 		},
 	],
 	safelist: [
@@ -36,9 +50,9 @@ const config: Config = {
 	],
 	overrides: [
 		{
-			files: "*.astro",
+			files: '*.astro',
 			options: {
-				parser: "astro",
+				parser: 'astro',
 			},
 		},
 	],

@@ -19,7 +19,8 @@
 		"docker:build": "docker build -t bybil:latest -f .deploy/Dockerfile .",
 		"docker:run": "docker run --rm -p 6122:6122 bybil:latest",
 		"dock": "bun docker:build && bun docker:run",
-		"upd": "ncu -i --format group"
+		"upd": "ncu -i --format group",
+		"format": "biome format --write"
 	},
 	"dependencies": {
 		"@astrojs/markdoc": "^0.15.0",
@@ -36,7 +37,7 @@
 		"react-dom": "^19.1.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "2.0.6",
 		"@bobthered/tailwindcss-palette-generator": "^4.0.0",
 		"@iconify-json/ic": "^1.2.2",
 		"@iconify-json/iconamoon": "^1.2.2",

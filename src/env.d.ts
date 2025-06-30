@@ -4,11 +4,10 @@
 /// <reference types="vite-plugin-pwa/vanillajs" />
 /// <reference types="vite-plugin-pwa/pwa-assets" />
 
-import type { CollectionEntry, ContentEntryMap } from "astro:content";
+import type { CollectionEntry, ContentEntryMap } from 'astro:content';
 
 declare global {
-	interface Window {
-	}
+	interface Window {}
 
 	interface HeaderSettings {
 		logo: {

@@ -1,5 +1,7 @@
 {
-	"css.customData": [".vscode/tailwind.json"],
+	"css.customData": [
+		".vscode/tailwind.json"
+	],
 	"workbench.editor.labelFormat": "short",
 	"workbench.tree.indent": 16,
 	"workbench.editor.highlightModifiedTabs": true,
@@ -51,7 +53,12 @@
 	"livePreview.debugOnExternalPreview": true,
 	"tailwindCSS.emmetCompletions": true,
 	"tailwindCSS.validate": true,
-	"tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list"],
+	"tailwindCSS.classAttributes": [
+		"class",
+		"className",
+		"ngClass",
+		"class:list"
+	],
 	"cSpell.language": "en,it",
 	"cSpell.diagnosticLevel": "Information",
 	"[astro]": {

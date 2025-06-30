@@ -1,12 +1,12 @@
 ---
 interface Props {
-	tag?: "section" | "div";
+	tag?: 'section' | 'div';
 	id?: string;
 	class?: string;
 	[x: string]: unknown;
 }
 
-const { class: className, id, tag = "section", ...rest } = Astro.props;
+const { class: className, id, tag = 'section', ...rest } = Astro.props;
 
 const Element = tag;
 ---

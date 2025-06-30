@@ -19,7 +19,6 @@ html {
 	@apply overflow-x-hidden;
 }
 
-
 /* Selection */
 ::-moz-selection {
 	color: white;
@@ -46,7 +45,6 @@ html {
 	-ms-user-select: none;
 	user-select: none;
 }
-
 
 /* Custom scrollbar */
 

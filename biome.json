@@ -1,8 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
+	"$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
 	"linter": {
 		"enabled": true,
 		"rules": {
@@ -11,11 +8,39 @@
 	},
 	"formatter": {
 		"enabled": true,
-		"attributePosition": "auto",
-		"indentWidth": 2,
-		"lineWidth": 120
+		"attributePosition": "multiline",
+		"expand": "always",
+		"lineWidth": 320,
+		"formatWithErrors": true,
+		"indentStyle": "tab",
+		"indentWidth": 4,
+		"lineEnding": "lf"
 	},
 	"javascript": {
-		"globals": ["Astro"]
+		"globals": [
+			"Astro"
+		],
+		"formatter": {
+			"quoteStyle": "single",
+			"attributePosition": "auto",
+			"trailingCommas": "all"
+		},
+		"parser": {
+			"unsafeParameterDecoratorsEnabled": true
+		}
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
+	"files": {
+		"maxSize": 1000000,
+		"includes": [
+			"**/*.*",
+			"!**/dist/**/*.*"
+		]
 	}
 }

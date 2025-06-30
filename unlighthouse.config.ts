@@ -1,4 +1,4 @@
-import { siteUrl } from "./site.config";
+import { siteUrl } from './site.config';
 
 /*
  * https://unlighthouse.dev/api/config
@@ -6,7 +6,9 @@ import { siteUrl } from "./site.config";
 export default {
 	site: siteUrl,
 	scanner: {
-		exclude: [/^\/cdn-cgi\//],
+		exclude: [
+			/^\/cdn-cgi\//,
+		],
 		dynamicSampling: 2,
 	},
 	ci: {

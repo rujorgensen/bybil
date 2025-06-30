@@ -17,13 +17,18 @@
 			"sourceMapPathOverrides": {
 				"vite:///src/*": "${webRoot}/*"
 			},
-			"skipFiles": ["**/node_modules/**"]
+			"skipFiles": [
+				"**/node_modules/**"
+			]
 		}
 	],
 	"compounds": [
 		{
 			"name": "Debug Server and Client",
-			"configurations": ["server", "client"]
+			"configurations": [
+				"server",
+				"client"
+			]
 		}
 	]
 }

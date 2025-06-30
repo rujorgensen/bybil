@@ -1,4 +1,3 @@
-
 // serve.ts
 const server = Bun.serve({
 	port: 6122,
@@ -18,13 +17,17 @@ const server = Bun.serve({
 			const isSub = path.includes('/da/') || path.includes('/en/') || path.includes('/it/');
 
 			// Fallback to index.html for SPA routing
-			const fallback = Bun.file(isSub ? (`${path}/index.html`) : './dist/client/index.html');
+			const fallback = Bun.file(isSub ? `${path}/index.html` : './dist/client/index.html');
 
 			return new Response(fallback, {
-				headers: { 'Content-Type': 'text/html' },
+				headers: {
+					'Content-Type': 'text/html',
+				},
 			});
 		} catch {
-			return new Response('Not found', { status: 404 });
+			return new Response('Not found', {
+				status: 404,
+			});
 		}
 	},
 });

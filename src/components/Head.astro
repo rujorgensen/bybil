@@ -1,9 +1,9 @@
 ---
-import { pwaAssetsHead } from "virtual:pwa-assets/head";
-import { pwaInfo } from "virtual:pwa-info";
-import "@/styles/global.css";
-import { getLocalizedSettings } from "@/lib/localization-helpers";
-import { SEO, type SEOProps } from "astro-seo";
+import { pwaAssetsHead } from 'virtual:pwa-assets/head';
+import { pwaInfo } from 'virtual:pwa-info';
+import '@/styles/global.css';
+import { getLocalizedSettings } from '@/lib/localization-helpers';
+import { SEO, type SEOProps } from 'astro-seo';
 
 type Props = {
 	seo?: SEOProps | MinimalSeo;
@@ -17,25 +17,20 @@ const { seo: seoProp } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const pathWithSlash = Astro.url.pathname.endsWith("/")
-	? Astro.url.pathname
-	: `${Astro.url.pathname}/`;
+const pathWithSlash = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
 
-const shareImage = new URL(
-	"og.png",
-	new URL(pathWithSlash, Astro.site),
-).toString();
+const shareImage = new URL('og.png', new URL(pathWithSlash, Astro.site)).toString();
 
 const baseSeo: SEOProps = {
 	title: seoProp?.title ?? defaultSeo.title,
 	description: seoProp?.description ?? defaultSeo.description,
-	charset: "UTF-8",
+	charset: 'UTF-8',
 	canonical: canonicalURL,
 	openGraph: {
 		basic: {
 			url: canonicalURL,
 			title: seoProp?.title ?? defaultSeo.title,
-			type: "website",
+			type: 'website',
 			image: shareImage,
 		},
 		optional: {
@@ -49,15 +44,15 @@ const baseSeo: SEOProps = {
 	extend: {
 		meta: [
 			{
-				name: "publisher",
+				name: 'publisher',
 				content: (seoProp as MinimalSeo)?.author ?? defaultSeo.author,
 			},
 			{
-				name: "author",
+				name: 'author',
 				content: (seoProp as MinimalSeo)?.author ?? defaultSeo.author,
 			},
 			{
-				name: "msapplication-TileColor",
+				name: 'msapplication-TileColor',
 				content: style.theme.colors.tileColor,
 			},
 		],

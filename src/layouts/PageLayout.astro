@@ -1,10 +1,10 @@
 ---
-import type { CollectionEntry } from "astro:content";
-import Container from "@/components/primitives/Container.astro";
-import BaseLayout from "./BaseLayout.astro";
+import type { CollectionEntry } from 'astro:content';
+import Container from '@/components/primitives/Container.astro';
+import BaseLayout from './BaseLayout.astro';
 
 type Props = {
-	frontmatter: CollectionEntry<"pages">;
+	frontmatter: CollectionEntry<'pages'>;
 };
 
 const { frontmatter } = Astro.props;

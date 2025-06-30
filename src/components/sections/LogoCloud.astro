@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
 interface Props {
 	title: string;
@@ -8,9 +8,9 @@ interface Props {
 
 const { title, logos } = Astro.props;
 
-const images = import.meta.glob<{ default: ImageMetadata }>(
-	"/src/assets/pages/**/*.{webp,jpeg,jpg,png,gif,svg}",
-);
+const images = import.meta.glob<{
+	default: ImageMetadata;
+}>('/src/assets/pages/**/*.{webp,jpeg,jpg,png,gif,svg}');
 ---
 
 <div class="text-sm font-medium pt-32 pb-8">

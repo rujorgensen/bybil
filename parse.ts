@@ -57,9 +57,9 @@ function filterCarsFromFile(filePath: string): Car[] {
 			if (typeof text === 'string') {
 				if (text.includes('ratings')) {
 					const match = text.match(/^(\d+)/);
-					if (match) count = parseInt(match[1], 10);
+					if (match) count = Number.parseInt(match[1], 10);
 				} else if (text.match(/^\d\.\d$/)) {
-					rating = parseFloat(text);
+					rating = Number.parseFloat(text);
 				}
 			}
 		}

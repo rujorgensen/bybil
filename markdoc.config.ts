@@ -1,4 +1,4 @@
-import { component, defineMarkdocConfig, nodes } from "@astrojs/markdoc/config";
+import { component, defineMarkdocConfig, nodes } from '@astrojs/markdoc/config';
 
 export default defineMarkdocConfig({
 	nodes: {
@@ -10,91 +10,194 @@ export default defineMarkdocConfig({
 			attributes: {
 				...nodes.heading.attributes, // Use the correct base attributes for a heading
 				// Additional custom attributes if needed
-				title: { type: String, render: "title" },
-				level: { type: Number, render: "level" },
+				title: {
+					type: String,
+					render: 'title',
+				},
+				level: {
+					type: Number,
+					render: 'level',
+				},
 			},
-			render: component("./src/components/primitives/Title.astro"),
+			render: component('./src/components/primitives/Title.astro'),
 		},
 		link: {
-			render: "a",
+			render: 'a',
 			attributes: {
-				href: { type: String },
-				target: { type: String, default: "_blank" },
-				rel: { type: String, default: "noopener noreferrer" },
+				href: {
+					type: String,
+				},
+				target: {
+					type: String,
+					default: '_blank',
+				},
+				rel: {
+					type: String,
+					default: 'noopener noreferrer',
+				},
 			},
 		},
 	},
 	tags: {
 		Container: {
 			attributes: {
-				class: { type: String, render: "class" },
+				class: {
+					type: String,
+					render: 'class',
+				},
 			},
-			children: ["*"],
-			render: component("./src/components/primitives/Container.astro"),
+			children: [
+				'*',
+			],
+			render: component('./src/components/primitives/Container.astro'),
 		},
 		ContainerFluid: {
 			attributes: {
-				class: { type: String, render: "class" },
+				class: {
+					type: String,
+					render: 'class',
+				},
 			},
-			children: ["*"],
-			render: component("./src/components/primitives/ContainerFluid.astro"),
+			children: [
+				'*',
+			],
+			render: component('./src/components/primitives/ContainerFluid.astro'),
 		},
 		Flex: {
 			attributes: {
-				class: { type: String, render: "class" },
-				direction: { type: String, render: "direction" },
-				verticalAlign: { type: String, render: "verticalAlign" },
-				horizontalAlign: { type: String, render: "horizontalAlign" },
-				itemsAlignment: { type: String, render: "itemsAlignment" },
-				gap: { type: Number, render: "gap" },
-				wrap: { type: Boolean, render: "wrap" },
+				class: {
+					type: String,
+					render: 'class',
+				},
+				direction: {
+					type: String,
+					render: 'direction',
+				},
+				verticalAlign: {
+					type: String,
+					render: 'verticalAlign',
+				},
+				horizontalAlign: {
+					type: String,
+					render: 'horizontalAlign',
+				},
+				itemsAlignment: {
+					type: String,
+					render: 'itemsAlignment',
+				},
+				gap: {
+					type: Number,
+					render: 'gap',
+				},
+				wrap: {
+					type: Boolean,
+					render: 'wrap',
+				},
 			},
-			children: ["*"],
-			render: component("./src/components/primitives/Flex.astro"),
+			children: [
+				'*',
+			],
+			render: component('./src/components/primitives/Flex.astro'),
 		},
 		Hero: {
 			attributes: {
-				title: { type: String, render: "title", required: true },
-				subtitle: { type: String, render: "subtitle", required: true },
-				buttons: { type: Array, render: "buttons", required: true },
+				title: {
+					type: String,
+					render: 'title',
+					required: true,
+				},
+				subtitle: {
+					type: String,
+					render: 'subtitle',
+					required: true,
+				},
+				buttons: {
+					type: Array,
+					render: 'buttons',
+					required: true,
+				},
 			},
-			render: component("./src/components/sections/Hero.astro"),
+			render: component('./src/components/sections/Hero.astro'),
 		},
 		LogoCloud: {
 			attributes: {
-				title: { type: String, render: "title", required: true },
-				logos: { type: Array, render: "logos", required: true },
+				title: {
+					type: String,
+					render: 'title',
+					required: true,
+				},
+				logos: {
+					type: Array,
+					render: 'logos',
+					required: true,
+				},
 			},
-			render: component("./src/components/sections/LogoCloud.astro"),
+			render: component('./src/components/sections/LogoCloud.astro'),
 		},
 		Testimonial: {
 			attributes: {
-				testimonial: { type: String, render: "testimonial", required: true },
-				name: { type: String, render: "name", required: true },
+				testimonial: {
+					type: String,
+					render: 'testimonial',
+					required: true,
+				},
+				name: {
+					type: String,
+					render: 'name',
+					required: true,
+				},
 			},
-			render: component("./src/components/sections/Testimonial.astro"),
+			render: component('./src/components/sections/Testimonial.astro'),
 		},
 		Results: {
 			attributes: {
-				title: { type: String, render: "title", required: true },
-				results: { type: Array, render: "results", required: true },
+				title: {
+					type: String,
+					render: 'title',
+					required: true,
+				},
+				results: {
+					type: Array,
+					render: 'results',
+					required: true,
+				},
 			},
-			render: component("./src/components/sections/Results.astro"),
+			render: component('./src/components/sections/Results.astro'),
 		},
 		About: {
 			attributes: {
-				title: { type: String, render: "title", required: true },
-				subtitle: { type: String, render: "subtitle", required: true },
-				content: { type: String, render: "content", required: true },
+				title: {
+					type: String,
+					render: 'title',
+					required: true,
+				},
+				subtitle: {
+					type: String,
+					render: 'subtitle',
+					required: true,
+				},
+				content: {
+					type: String,
+					render: 'content',
+					required: true,
+				},
 			},
-			render: component("./src/components/sections/About.astro"),
+			render: component('./src/components/sections/About.astro'),
 		},
 		Contact: {
 			attributes: {
-				title: { type: String, render: "title", required: true },
-				fields: { type: Array, render: "fields", required: true },
+				title: {
+					type: String,
+					render: 'title',
+					required: true,
+				},
+				fields: {
+					type: Array,
+					render: 'fields',
+					required: true,
+				},
 			},
-			render: component("./src/components/sections/Contact.astro"),
+			render: component('./src/components/sections/Contact.astro'),
 		},
 	},
 });

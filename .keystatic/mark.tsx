@@ -1,17 +1,17 @@
-import type { ReactElement } from "react";
+import type { ReactElement } from 'react';
 
 // Assume ColorScheme is defined somewhere with 'auto' as one of the possible values
-type ColorScheme = "light" | "dark" | "auto";
+type ColorScheme = 'light' | 'dark' | 'auto';
 
 // BrandMark function type definition using Exclude
-type BrandMark = (props: {
-	colorScheme: Exclude<ColorScheme, "auto">;
-}) => ReactElement;
+type BrandMark = (props: { colorScheme: Exclude<ColorScheme, 'auto'> }) => ReactElement;
 
 // Example Component using the BrandMark type
 export const BrandMarkComponent: BrandMark = ({ colorScheme }) => {
 	// This function must return a ReactElement and cannot take 'auto' as a colorScheme
-	const style = { fill: colorScheme === "dark" ? "#fff" : "#000" };
+	const style = {
+		fill: colorScheme === 'dark' ? '#fff' : '#000',
+	};
 	return (
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 750" width={50} style={style}>
 			<title>Brand mark</title>

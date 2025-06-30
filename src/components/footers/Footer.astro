@@ -1,10 +1,10 @@
 ---
-import { getCollection } from "astro:content";
-import Container from "@/components/primitives/Container.astro";
-import Link from "@/components/primitives/Link.astro";
-import { getLocalizedSettings } from "@/lib/localization-helpers";
-import { translatePath, unlocalizedUrl } from "@/lib/localization-helpers";
-import { defaultLocale, locales } from "site";
+import { getCollection } from 'astro:content';
+import Container from '@/components/primitives/Container.astro';
+import Link from '@/components/primitives/Link.astro';
+import { getLocalizedSettings } from '@/lib/localization-helpers';
+import { translatePath, unlocalizedUrl } from '@/lib/localization-helpers';
+import { defaultLocale, locales } from 'site';
 
 const currentLocale = Astro.currentLocale;
 
@@ -19,43 +19,33 @@ function isActiveLocale(locale: string): boolean {
 	return locale === currentLocale;
 }
 
-const pages = await getCollection("pages");
-const posts = await getCollection("posts");
+const pages = await getCollection('pages');
+const posts = await getCollection('posts');
 
 // get top 6 pages which are informational pages
 const topInfoPages = pages
 	.map((page) => {
-		const [lang, ...slug] = page.slug.split("/");
+		const [lang, ...slug] = page.slug.split('/');
 		return {
 			...page,
 			lang: lang,
-			slug: page.slug.startsWith("/") ? page.slug : `/${page.slug}`,
+			slug: page.slug.startsWith('/') ? page.slug : `/${page.slug}`,
 		};
 	})
-	.filter(
-		(page) =>
-			page.lang === currentLocale && page.data.type === "informational",
-	)
+	.filter((page) => page.lang === currentLocale && page.data.type === 'informational')
 	.slice(0, 6);
 
 const lastPosts = posts
 	.map((page) => {
-		const [lang, ...slug] = page.slug.split("/");
+		const [lang, ...slug] = page.slug.split('/');
 		return {
 			...page,
 			lang: lang,
-			slug: translatePath(
-				lang,
-				`/post${unlocalizedUrl(`/${page.slug}`)}`,
-			),
+			slug: translatePath(lang, `/post${unlocalizedUrl(`/${page.slug}`)}`),
 		};
 	})
 	.filter((page) => page.lang === currentLocale)
-	.sort(
-		(a, b) =>
-			new Date(b.data.lastUpdateDate).getTime() -
-			new Date(a.data.lastUpdateDate).getTime(),
-	)
+	.sort((a, b) => new Date(b.data.lastUpdateDate).getTime() - new Date(a.data.lastUpdateDate).getTime())
 	.slice(0, 5);
 ---
 
