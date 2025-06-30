@@ -1,9 +1,37 @@
+import { WebhookClient } from 'discord.js';
+
+const REDIRECT_URL: string | undefined = process.env.URL_REDIRECT_NO_1;
+
+if (!REDIRECT_URL) {
+	throw new Error('URL_REDIRECT_NO_1 environment variable is not set');
+}
+
+const webhookClient = new WebhookClient({
+	url: process.env.DISCORD_BYBIL_WEBHOOK_URL ?? '',
+});
+
 // serve.ts
 const server = Bun.serve({
 	port: 6122,
-	async fetch(req) {
+	fetch: async (req: any, server: any) => {
 		const url = new URL(req.url);
 		const path = `./dist/client${url.pathname}`;
+
+		if (url.pathname === '/r') {
+			const ip = server.requestIP(req);
+
+			console.log({
+				message: "Redirecting user",
+				ip,
+				url,
+			});
+
+			webhookClient.send({
+				content: `A user with IP "${ip}" was redirected to "${REDIRECT_URL}"\n`,
+			});
+
+			return Response.redirect(REDIRECT_URL, 301);
+		}
 
 		try {
 			const file = Bun.file(path);
@@ -12,7 +40,7 @@ const server = Bun.serve({
 				return new Response(file);
 			}
 
-			console.log(`File not found: ${path} ${file}`);
+			console.log(`File not found: ${path} ${url.pathname}`);
 
 			const isSub = path.includes('/da/') || path.includes('/en/') || path.includes('/it/');
 
