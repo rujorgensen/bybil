@@ -27,7 +27,7 @@ const server = Bun.serve({
 			});
 
 			webhookClient.send({
-				content: `A user with IP "${ip}" was redirected to "${REDIRECT_URL}"\n`,
+				content: `A user with IP "${ip.address}" was redirected to "${REDIRECT_URL}"\n`,
 			});
 
 			return Response.redirect(REDIRECT_URL, 301);
