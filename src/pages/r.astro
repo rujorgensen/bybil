@@ -1,3 +1,9 @@
 ---
-return Astro.redirect(import.meta.env.URL_REDIRECT_NO_1, 302); // temporary redirect
+export const prerender = false;
+import { userRedirected } from './discord.js';
+
+const url = import.meta.env.URL_REDIRECT_NO_1;
+
+userRedirected(Astro.clientAddress, url);
+return Astro.redirect(url, 302); // temporary redirect
 ---
