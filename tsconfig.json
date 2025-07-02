@@ -14,6 +14,7 @@
 			]
 		},
 		"types": [
+			"@types/bun",
 			"astro/client",
 			"vite-plugin-pwa/vanillajs",
 			"vite-plugin-pwa/info",
