@@ -21,7 +21,7 @@ const server = Bun.serve({
 			const ip = server.requestIP(req);
 
 			console.log({
-				message: "Redirecting user",
+				message: `Redirecting user to "${REDIRECT_URL}"`,
 				ip,
 				url,
 			});
@@ -30,7 +30,7 @@ const server = Bun.serve({
 				content: `A user with IP "${ip.address}" was redirected to "${REDIRECT_URL}"\n`,
 			});
 
-			return Response.redirect(REDIRECT_URL, 301);
+			return Response.redirect(REDIRECT_URL, 302); // temporary redirect
 		}
 
 		try {
