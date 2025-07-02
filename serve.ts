@@ -17,7 +17,9 @@ const server = Bun.serve({
 		const url = new URL(req.url);
 		const path = `./dist/client${url.pathname}`;
 
-		if (url.pathname === '/r') {
+		console.log(`Request received for: "${url.pathname}"`);
+
+		if ((url.pathname === '/r') || url.pathname.startsWith('/r/')) {
 			const ip = server.requestIP(req);
 
 			console.log({
