@@ -82,6 +82,7 @@ export default defineConfig({
 				navigateFallbackDenylist: [
 					/^\/keystatic/,
 					/^\/api/,
+					/^\/r/,
 				],
 				skipWaiting: true,
 				maximumFileSizeToCacheInBytes: 3 * 1024 * 1024,
