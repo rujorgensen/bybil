@@ -21,7 +21,7 @@
 		"dock": "bun docker:build && bun docker:run",
 		"upd": "ncu -i --format group",
 		"format": "biome format --write",
-		"qr:generate": "qrcode -d 09366D -o ./data/logo-and-qr/qr-code.png \"https://bybil.nu/r\""
+		"qr:generate": "qrcode -d 09366D -o ./data/logo-and-qr/qr-code.svg --type=svg \"https://bybil.nu/r/ek42435\""
 	},
 	"dependencies": {
 		"@astrojs/markdoc": "^0.15.0",
