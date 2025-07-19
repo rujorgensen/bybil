@@ -10,10 +10,6 @@
 	"bugs": "https://github.com/rujorgensen/bybil/issues",
 	"homepage": "https://bybil.nu",
 	"scripts": {
-		"dev": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro",
 		"wrangler:dev": "wrangler pages dev",
 		"pwa:generate-assets": "pwa-assets-generator --preset minimal public/logo.svg",
 		"docker:build": "docker build -t bybil:latest -f .deploy/Dockerfile .",

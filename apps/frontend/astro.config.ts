@@ -9,7 +9,7 @@ import robotsTxt from 'astro-robots-txt';
 import node from '@astrojs/node';
 import { defineConfig } from 'astro/config';
 import { defaultLocale, locales, siteTitle, siteUrl } from './site.config';
-import pkg from './package.json';
+import pkg from '../../package.json';
 
 // https://astro.build/config
 export default defineConfig({

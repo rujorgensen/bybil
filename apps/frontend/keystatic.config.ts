@@ -1,8 +1,8 @@
 // keystatic.config.ts
 import { collection, config, fields, singleton } from '@keystatic/core';
 import { block, wrapper } from '@keystatic/core/content-components';
-import { ContactIcon, ContainerFluidIcon, ContainerIcon, FlexboxIcon, GeneralIcon, HeroIcon } from './.keystatic/keystatic-icons';
-import { BrandMarkComponent } from './.keystatic/mark';
+import { ContactIcon, ContainerFluidIcon, ContainerIcon, FlexboxIcon, GeneralIcon, HeroIcon } from '../../.keystatic/keystatic-icons';
+import { BrandMarkComponent } from '../../.keystatic/mark';
 
 export default config({
 	storage: {
