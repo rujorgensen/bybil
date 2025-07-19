@@ -46,6 +46,10 @@
 		"@iconify-json/mdi": "^1.2.3",
 		"@iconify-json/ph": "^1.2.2",
 		"@iconify-json/solar": "^1.2.2",
+		"@nx/js": "^21.3.0",
+		"@swc-node/register": "~1.9.1",
+		"@swc/core": "~1.5.7",
+		"@swc/helpers": "~0.5.11",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/forms": "^0.5.10",
 		"@tailwindcss/typography": "^0.5.16",
@@ -57,6 +61,7 @@
 		"astro-icon": "^1.1.5",
 		"astro-robots-txt": "^1.0.0",
 		"astro-seo": "^0.8.4",
+		"nx": "21.1.2",
 		"qrcode": "^1.5.4",
 		"satori": "^0.15.2",
 		"sharp": "0.34.3",
@@ -66,5 +71,6 @@
 	"packageManager": "bun@1.2.19",
 	"overrides": {
 		"sharp": "0.34.3"
-	}
+	},
+	"nx": {}
 }
