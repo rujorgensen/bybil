@@ -18,6 +18,7 @@ export default defineConfig({
 	adapter: node({
 		mode: 'standalone',
 	}),
+	outDir: '../../dist/apps/frontend',
 	compressHTML: true,
 	i18n: {
 		defaultLocale: defaultLocale,
