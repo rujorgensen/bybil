@@ -2,7 +2,7 @@
 # *** BASE STAGE
 # ******************************************************************************
 # use the official Bun image, see all versions at https://hub.docker.com/r/oven/bun/tags
-FROM oven/bun:1.2.17-alpine AS base
+FROM oven/bun:1.2.19-alpine AS base
 
 WORKDIR /src
 
@@ -24,8 +24,8 @@ FROM base AS build
 COPY --from=install ./src/node_modules node_modules
 COPY . .
 
-# ENV NODE_ENV=production
-RUN bun run build
+WORKDIR /src/apps/frontend
+RUN bunx --bun astro build
 
 # ******************************************************************************
 # *** DEPLOY STAGE
