@@ -63,5 +63,6 @@
 	"cSpell.diagnosticLevel": "Information",
 	"[astro]": {
 		"editor.defaultFormatter": "astro-build.astro-vscode"
-	}
+	},
+	"nxConsole.generateAiAgentRules": true
 }
