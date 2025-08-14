@@ -33,6 +33,10 @@ RUN bunx --bun astro build
 # Copy production dependencies and source code into final image
 FROM base AS deploy
 
+# Host is necessary for Docker to bind correctly
+# ENV HOST=0.0.0.0
+# ENV PORT=6122
+
 COPY --from=build ./src/dist ./dist
 COPY serve.ts ./
 

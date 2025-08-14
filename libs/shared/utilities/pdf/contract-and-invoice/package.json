@@ -1,0 +1,15 @@
+{
+	"name": "@shared/utilities/pdf/contract-and-invoice",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"main": "./index.js",
+	"types": "./index.d.ts",
+	"dependencies": {
+		"currency.js": "^2.0.4"
+	},
+	"devDependencies": {
+		"@types/pdfmake": "^0.2.11",
+		"pdfmake": "^0.2.20"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"name": "shared-utilities-pdf-contract-and-invoice",
+	"$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/shared/utilities/pdf/contract-and-invoice/src",
+	"projectType": "library",
+	"tags": [
+		"type:utilities",
+		"scope:shared"
+	],
+	"// targets": "to see all targets run: nx show project shared-utilities-pdf-contract-and-invoice --web",
+	"targets": {
+		"run": {
+			"executor": "nx:run-script",
+			"options": {
+				"script": "bun run --hot /home/rj/workspace/bybil/libs/shared/utilities/pdf/contract-and-invoice/src/lib/shared-utilities-pdf-contract-and-invoice.ts"
+			}
+		}
+	}
+}
