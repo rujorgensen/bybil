@@ -19,7 +19,11 @@
 		"skipDefaultLibCheck": true,
 		"strictNullChecks": true,
 		"strict": true,
-		"paths": {}
+		"paths": {
+			"@shared/utilities/pdf/contract-and-invoice": [
+				"libs/shared/utilities/pdf/contract-and-invoice/src/index.ts"
+			],
+		}
 	},
 	"exclude": [
 		"node_modules",

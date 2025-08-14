@@ -19,7 +19,10 @@
     "tombonnike.vscode-status-bar-format-toggle",
     "visualstudioexptteam.vscodeintellicode",
     "yzhang.markdown-all-in-one",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "nrwl.angular-console",
+    "esbenp.prettier-vscode",
+    "firsttris.vscode-jest-runner"
   ],
   "unwantedRecommendations": []
 }
