@@ -13,6 +13,12 @@ FROM base AS install
 
 COPY package.json bun.lock ./
 
+# 2025.08.18:
+# The below line is necessary due to the PDF workspace listed in package.json
+# Use bun install --filter ... to install only the necessary dependencies
+# Something like --filter="!@shared/utilities/pdf/contract-and-invoice"
+COPY ./libs ./libs
+
 RUN bun install --frozen-lockfile
 
 # ******************************************************************************
