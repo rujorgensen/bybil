@@ -2,7 +2,7 @@
 # *** BASE STAGE
 # ******************************************************************************
 # use the official Bun image, see all versions at https://hub.docker.com/r/oven/bun/tags
-FROM oven/bun:1.2.19-alpine AS base
+FROM oven/bun:1.2.20-alpine AS base
 
 WORKDIR /src
 
@@ -12,6 +12,12 @@ WORKDIR /src
 FROM base AS install
 
 COPY package.json bun.lock ./
+
+# 2025.08.18:
+# The below line is necessary due to the PDF workspace listed in package.json
+# Use bun install --filter ... to install only the necessary dependencies
+# Something like --filter="!@shared/utilities/pdf/contract-and-invoice"
+COPY ./libs ./libs
 
 RUN bun install --frozen-lockfile
 
