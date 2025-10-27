@@ -1,73 +1,61 @@
 {
-	"$schema": "./node_modules/nx/schemas/nx-schema.json",
-	"targetDefaults": {
-		"build": {
-			"outputs": [
-				"{projectRoot}/dist"
-			],
-			"cache": true
-		},
-		"pwa:generate-assets": {
-			"cache": true
-		},
-		"docker:build": {
-			"cache": true
-		},
-		"@nx/js:tsc": {
-			"cache": true,
-			"dependsOn": [
-				"^build"
-			],
-			"inputs": [
-				"default",
-				"^default"
-			]
-		},
-		"@nx/esbuild:esbuild": {
-			"cache": true,
-			"dependsOn": [
-				"^build"
-			],
-			"inputs": [
-				"default",
-				"^default"
-			]
-		}
-	},
-	"plugins": [
-		{
-			"plugin": "@nx/js/typescript",
-			"options": {
-				"typecheck": {
-					"targetName": "typecheck"
-				},
-				"build": {
-					"targetName": "build",
-					"configName": "tsconfig.lib.json",
-					"buildDepsName": "build-deps",
-					"watchDepsName": "watch-deps"
-				}
-			}
-		},
-		{
-			"plugin": "@nx/vite/plugin",
-			"options": {
-				"buildTargetName": "build",
-				"testTargetName": "test",
-				"serveTargetName": "serve",
-				"devTargetName": "dev",
-				"previewTargetName": "preview",
-				"serveStaticTargetName": "serve-static",
-				"typecheckTargetName": "typecheck",
-				"buildDepsTargetName": "build-deps",
-				"watchDepsTargetName": "watch-deps"
-			}
-		},
-		{
-			"plugin": "@nx/eslint/plugin",
-			"options": {
-				"targetName": "lint"
-			}
-		}
-	]
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "build": {
+      "outputs": ["{projectRoot}/dist"],
+      "cache": true
+    },
+    "pwa:generate-assets": {
+      "cache": true
+    },
+    "docker:build": {
+      "cache": true
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^default"]
+    },
+    "@nx/esbuild:esbuild": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^default"]
+    }
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
+        }
+      }
+    },
+    {
+      "plugin": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "devTargetName": "dev",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static",
+        "typecheckTargetName": "typecheck",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    }
+  ]
 }
