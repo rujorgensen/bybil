@@ -2,7 +2,7 @@
 	"name": "@shared/utilities/pdf/contract-and-invoice",
 	"version": "0.0.1",
 	"private": true,
-	"type": "commonjs",
+	"type": "module",
 	"main": "./index.cjs",
 	"types": "./index.d.ts",
 	"dependencies": {
