@@ -12,6 +12,7 @@ export const receipt = (
 		start: Date;
 		end: Date;
 	},
+	priceInclVat: number,
 ): { content: Content[]; styles: StyleDictionary; } => ({
 	content: [
 		{
@@ -60,7 +61,7 @@ export const receipt = (
 								],
 							},
 							{
-								text: '12345678',
+								text: priceInclVat,
 								//  this.format(
 								// 	venueSettings,
 								// 	archivedCustomOrderLine.retailPrice *
@@ -112,12 +113,12 @@ export const receipt = (
 							],
 						},
 						{
-							text: 'archivedOrder.currencySymbol',
+							text: 'DKK',
 							noWrap: true,
 							style: ['currency', 'discrete'],
 						},
 						{
-							text: '321321',
+							text: priceInclVat * 0.8,
 							//  this.format(
 							// 	venueSettings,
 							// 	archivedOrder.subtotal,
@@ -147,7 +148,7 @@ export const receipt = (
 							style: ['currency', 'discrete'],
 						},
 						{
-							text: 222,
+							text: priceInclVat * 0.2,
 							//  this.format(
 							// 	venueSettings,
 							// 	archivedOrder.tax,
@@ -183,7 +184,7 @@ export const receipt = (
 											],
 											[
 												{
-													text: '5632',
+													text: priceInclVat,
 													noWrap: true,
 													style: [
 														'total',

@@ -1,0 +1,31 @@
+export interface IPhrases {
+	receipt: string;
+	orderNo: string;
+	createdAt: string;
+	archivedAt: string;
+	by: string;
+	products: string;
+	payment: string;
+	soldBy: string;
+	date: string;
+	paymentType: string;
+	orderType: string;
+	'enums.EOrderType_S.STAY': string;
+	'enums.EOrderType_S.TOGO': string;
+	'enums.EOrderType_S.DELIVER': string;
+	vatId: string;
+	orderDetails: string;
+	total: string;
+	'dictionary.of': string;
+	'dictionary.cash': string;
+	'dictionary.card': string;
+	'dictionary.bankTransfer': string,
+	'dictionary.other': string;
+	'order.archive.pdf.footerStart': string;
+	appName: string;
+	'venue.license': string;
+	url: string;
+	'dictionary.discount': string;
+	subTotal: string;
+	'dictionary.tax': string;
+}

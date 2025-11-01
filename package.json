@@ -17,7 +17,8 @@
 		"dock": "bun docker:build && bun docker:run",
 		"upd": "bun upgrade && ncu -i --format group",
 		"format": "biome format --write",
-		"qr:generate": "qrcode -d 09366D -o ./data/logo-and-qr/qr-code.svg --type=svg \"https://bybil.nu/r/ek42435\""
+		"qr:generate": "qrcode -d 09366D -o ./data/logo-and-qr/qr-code.svg --type=svg \"https://bybil.nu/r/ek42435\"",
+		"pdf:generate": "bun run --hot ./libs/shared/utilities/pdf/contract-and-invoice/src/lib/shared-utilities-pdf-contract-and-invoice.ts"
 	},
 	"dependencies": {
 		"@astrojs/markdoc": "^0.15.8",
