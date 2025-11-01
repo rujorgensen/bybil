@@ -9,7 +9,11 @@
 		"noImplicitReturns": true,
 		"noFallthroughCasesInSwitch": true,
 		"noPropertyAccessFromIndexSignature": true,
+<<<<<<< HEAD
 		"esmoduleInterop": true
+=======
+		"esModuleInterop": true
+>>>>>>> cf07330f8a92eb70b3db17cfae88dd75df3af842
 	},
 	"files": [],
 	"include": [],

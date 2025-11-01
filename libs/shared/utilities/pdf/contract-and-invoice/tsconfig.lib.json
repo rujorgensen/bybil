@@ -11,7 +11,7 @@
 	},
 	"include": [
 		"src/**/*.ts"
-, "shared-utilities-pdf-contract-and-invoice.spec.ts"	],
+	],
 	"exclude": [
 		"vite.config.ts",
 		"vite.config.mts",

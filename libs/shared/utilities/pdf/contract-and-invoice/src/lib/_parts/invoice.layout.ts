@@ -144,7 +144,7 @@ export const receipt = (
 					// 					.concat(),
 
 					// ******************************************************************************
-					// *** Discount, subtotal and tax
+					// *** Subtotal and tax
 					// ******************************************************************************
 					[
 						{
@@ -180,12 +180,20 @@ export const receipt = (
 							],
 						},
 						{
+<<<<<<< HEAD
 							text: 'DKK',
+=======
+							text: 'archivedOrder.currencySymbol',
+>>>>>>> cf07330f8a92eb70b3db17cfae88dd75df3af842
 							noWrap: true,
 							style: ['currency', 'discrete'],
 						},
 						{
+<<<<<<< HEAD
 							text: priceInclVat * 0.8,
+=======
+							text: '321321',
+>>>>>>> cf07330f8a92eb70b3db17cfae88dd75df3af842
 							//  this.format(
 							// 	venueSettings,
 							// 	archivedOrder.subtotal,
@@ -215,7 +223,11 @@ export const receipt = (
 							style: ['currency', 'discrete'],
 						},
 						{
+<<<<<<< HEAD
 							text: priceInclVat * 0.2,
+=======
+							text: 222,
+>>>>>>> cf07330f8a92eb70b3db17cfae88dd75df3af842
 							//  this.format(
 							// 	venueSettings,
 							// 	archivedOrder.tax,
@@ -225,6 +237,7 @@ export const receipt = (
 						},
 					],
 
+<<<<<<< HEAD
 					// // ! Discount
 					// [
 					// 	'',
@@ -259,6 +272,8 @@ export const receipt = (
 					// 	// },
 					// ],
 
+=======
+>>>>>>> cf07330f8a92eb70b3db17cfae88dd75df3af842
 					// ******************************************************************************
 					// *** Total
 					// ******************************************************************************
@@ -285,7 +300,11 @@ export const receipt = (
 											],
 											[
 												{
+<<<<<<< HEAD
 													text: '150',
+=======
+													text: '5632',
+>>>>>>> cf07330f8a92eb70b3db17cfae88dd75df3af842
 													noWrap: true,
 													style: [
 														'total',
@@ -311,6 +330,7 @@ export const receipt = (
 						'',
 					],
 				],
+<<<<<<< HEAD
 
 				// ******************************************************************************
 				// *** Payment
@@ -421,6 +441,10 @@ export const receipt = (
 
 
 
+=======
+			},
+		},
+>>>>>>> cf07330f8a92eb70b3db17cfae88dd75df3af842
 	],
 	styles: {
 		contractHeader: {

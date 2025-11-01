@@ -29,6 +29,8 @@ const monthIndexToText = (
 		case 11:
 			return 'December';
 	}
+
+	throw new Error('Invalid month index');
 }
 
 export const formatDate = (

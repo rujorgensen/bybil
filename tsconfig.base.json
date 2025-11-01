@@ -22,7 +22,11 @@
 		"paths": {
 			"@shared/utilities/pdf/contract-and-invoice": [
 				"libs/shared/utilities/pdf/contract-and-invoice/src/index.ts"
+<<<<<<< HEAD
 			]
+=======
+			],
+>>>>>>> cf07330f8a92eb70b3db17cfae88dd75df3af842
 		}
 	},
 	"exclude": [

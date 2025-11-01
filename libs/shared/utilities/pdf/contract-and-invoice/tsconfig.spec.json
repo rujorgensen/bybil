@@ -24,5 +24,9 @@
 		"src/**/*.test.jsx",
 		"src/**/*.spec.jsx",
 		"src/**/*.d.ts"
+<<<<<<< HEAD
 , "shared-utilities-pdf-contract-and-invoice.spec.ts"	]
+=======
+	]
+>>>>>>> cf07330f8a92eb70b3db17cfae88dd75df3af842
 }

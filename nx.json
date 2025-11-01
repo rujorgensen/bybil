@@ -10,6 +10,19 @@
     },
     "docker:build": {
       "cache": true
+<<<<<<< HEAD
+=======
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^default"]
+    },
+    "@nx/esbuild:esbuild": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^default"]
+>>>>>>> cf07330f8a92eb70b3db17cfae88dd75df3af842
     }
   },
   "plugins": [
