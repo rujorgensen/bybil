@@ -13,6 +13,8 @@ import type { IPhrases } from './_interfaces/translations.interfaces';
 export interface ISettings {
 	receipt: {
 		orderNo: string;
+		priceInclVat: number;
+		formOfPayment: 'cash' | 'card' | 'bank-transfer' | 'other';
 	},
 	seller: {
 		name: string;
@@ -71,6 +73,7 @@ export class PDFGeneratorUtility {
 		'dictionary.of': 'af',
 		'dictionary.cash': 'kontant',
 		'dictionary.card': 'kort',
+		'dictionary.bankTransfer': 'bankoverførsel',
 		'dictionary.other': 'andet',
 		'order.archive.pdf.footerStart': 'Genereret med',
 		appName: 'uPOSia',
@@ -112,7 +115,6 @@ export class PDFGeneratorUtility {
 		//	transform: (date: Date, dateFormat: string) => string | null,
 		// transform(value: Date | string | number, format?: string, timezone?: string, locale?: string): string | null;
 	): TDocumentDefinitions {
-
 		const H2_TOP_PADDING: number = 20;
 		const H2_BOTTOM_PADDING: number = 5;
 
@@ -209,23 +211,20 @@ export class PDFGeneratorUtility {
 									{
 										text: this.capitalize(
 											[
-												'archivedOrder.payment.cash' === 0
-													? ''
-													: phrases[
-													'dictionary.cash'
-													],
-												'archivedOrder.payment.card' === 0
-													? ''
-													: phrases[
-													'dictionary.card'
-													],
-												'archivedOrder.payment.other' === 0
-													? ''
-													: phrases[
-													'dictionary.other'
-													],
+												settings.receipt.formOfPayment === 'cash'
+													? phrases['dictionary.cash']
+													: null,
+												settings.receipt.formOfPayment === 'card'
+													? phrases['dictionary.card']
+													: null,
+												settings.receipt.formOfPayment === 'bank-transfer'
+													? phrases['dictionary.bankTransfer']
+													: null,
+												settings.receipt.formOfPayment === 'other'
+													? phrases['dictionary.other']
+													: null,
 											]
-												.filter((_) => _ !== '')
+												.filter((_) => _ !== null)
 												.join(' / ') ??
 											//    .reduce((tot, a) => tot + ' / ' + a, '')
 											'-',
@@ -306,6 +305,7 @@ export class PDFGeneratorUtility {
 					phrases,
 					settings.contract.period,
 					settings.contract.car,
+					settings.receipt.priceInclVat,
 				).content,
 
 				// ******************************************************************************

@@ -12,7 +12,9 @@ export function sharedUtilitiesPdfContractAndInvoice(
 				.generateDOCDefinition(
 					{
 						receipt: {
-							orderNo: '123456789',
+							orderNo: '1',
+							priceInclVat: 150,
+							formOfPayment: 'bank-transfer',
 						},
 						seller: {
 							name: 'Bybil ApS',
@@ -20,7 +22,7 @@ export function sharedUtilitiesPdfContractAndInvoice(
 								"Studiestræde 34A, 4. th.",
 								"1455 København K",
 							],
-							vatNumber: '123456789',
+							vatNumber: Bun.env['VAT_NUMBER'] || 'none',
 						},
 						contract: {
 							car: {
@@ -29,18 +31,18 @@ export function sharedUtilitiesPdfContractAndInvoice(
 								registrationNumber: 'EK 42 435',
 							},
 							period: {
-								start: new Date('2025-07-21T08:00:00'),
-								end: new Date('2025-07-24T22:00:00'),
+								start: new Date('2025-11-01T14:00:00'),
+								end: new Date('2025-11-01T19:00:00'),
 							},
 							renters: [
-								{
-									fullName: 'Rune Jørgensen',
-									licenseNumber: '23243408',
-									addressLines: [
-										'Studiestræde 34A',
-										'1455 København K',
-									],
-								},
+								// {
+								// 	fullName: 'Rune Jørgensen',
+								// 	licenseNumber: '23243408',
+								// 	addressLines: [
+								// 		'Studiestræde 34A',
+								// 		'1455 København K',
+								// 	],
+								// },
 								{
 									fullName: 'Chiara Nicola',
 									licenseNumber: 'U19B91238J',
@@ -64,7 +66,7 @@ export function sharedUtilitiesPdfContractAndInvoice(
 		.getBlob(async (blob: Blob) => {
 			console.log(blob, new Date() + ' - PDF created successfully');
 
-			const path = "./file.pdf";
+			const path = `./invoice-${1}-${new Date().toISOString()}.pdf`;
 			await Bun.write(path, blob);
 			console.log('File written to:', path);
 

@@ -19,6 +19,7 @@ export interface IPhrases {
 	'dictionary.of': string;
 	'dictionary.cash': string;
 	'dictionary.card': string;
+	'dictionary.bankTransfer': string,
 	'dictionary.other': string;
 	'order.archive.pdf.footerStart': string;
 	appName: string;
