@@ -304,7 +304,7 @@ export class PDFGeneratorUtility {
 				...receipt(
 					phrases,
 					settings.contract.period,
-					settings.contract.car,
+					// settings.contract.car,
 					settings.receipt.priceInclVat,
 				).content,
 
@@ -314,60 +314,7 @@ export class PDFGeneratorUtility {
 				...contract.content,
 			],
 
-			footer: (
-				currentPage: number,
-				pageCount: number,
-				// pageSize: { width: number; },
-			) => {
-				// you can apply any logic and return any valid pdfmake element
 
-				return {
-					columns: [
-						{
-							// Fit the svg inside a rectangle
-							svg: logo,
-							fit: [30, 30],
-
-							width: 'auto',
-						},
-						{
-							text: [
-								{
-									text:
-										`${phrases['order.archive.pdf.footerStart']} `,
-								},
-								{
-									text: `${phrases.appName} `,
-									style: 'popColor200',
-								},
-								{
-									text: phrases['venue.license'],
-								},
-								{
-									text: ' | ',
-								},
-								{
-									text: phrases.url,
-									link: `https://${phrases.url}`,
-									/*   style: 'url', */
-								},
-							],
-							noWrap: true,
-							width: '*',
-							alignment: 'center',
-						},
-						{
-							text:
-								pageCount === 1
-									? ''
-									: `${currentPage} ${phrases['dictionary.of']} ${pageCount}`,
-							alignment: 'right',
-							width: 'auto',
-						},
-					],
-					style: 'footer',
-				};
-			},
 			// [left, top, right, bottom]
 			styles: {
 				...contract.styles,
@@ -462,6 +409,59 @@ export class PDFGeneratorUtility {
 			}, */
 			defaultStyle: {
 				font: 'Montserrat',
+			},
+
+			footer: (
+				currentPage: number,
+				pageCount: number,
+				// pageSize: { width: number; },
+			) => {
+				// you can apply any logic and return any valid pdfmake element
+				return {
+					columns: [
+						{
+							// Fit the svg inside a rectangle
+							svg: logo,
+							fit: [30, 30],
+							width: 'auto' as unknown as number, // The type insists on number, but 'auto' works
+						},
+						{
+							text: [
+								{
+									text:
+										`${phrases['order.archive.pdf.footerStart']} `,
+								},
+								{
+									text: `${phrases.appName} `,
+									style: 'popColor200',
+								},
+								{
+									text: phrases['venue.license'],
+								},
+								{
+									text: ' | ',
+								},
+								{
+									text: phrases.url,
+									link: `https://${phrases.url}`,
+									/*   style: 'url', */
+								},
+							],
+							noWrap: true,
+							width: '*',
+							alignment: 'center',
+						},
+						{
+							text:
+								pageCount === 1
+									? ''
+									: `${currentPage} ${phrases['dictionary.of']} ${pageCount}`,
+							alignment: 'right',
+							width: 'auto',
+						},
+					],
+					style: 'footer',
+				};
 			},
 		};
 	}
